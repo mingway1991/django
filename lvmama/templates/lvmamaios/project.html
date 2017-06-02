@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>工程</title>
+</head>
+<body>
+<a href="http://127.0.0.1:8000/lvmamaios/index">首页</a>
+<br>
+	状态：{{project.project_status}}
+	<form method = 'post' enctype="multipart/form-data">
+	{% csrf_token %}
+	工程名：<input type='text' name='pname' value='{{project.project_name}}'>
+	<br>
+	工程地址：<input type='text' name='purl' value='{{project.project_url}}'>
+	<br>
+	工程分支：<input type='text' name='pbranch' value='{{project.project_branch}}'>
+	<br>
+	<input type="submit" value = "ok" />
+	</form>
+<p>
+	<a href="http://127.0.0.1:8000/lvmamaios/publish/{{project.id}}">发版</a>
+</p>
+<p>
+	{% for report in reports %}
+	<li><a href="http://127.0.0.1:8000/lvmamaios/report/{{ report.id }}">{{report.timestamp}}</a> {{report.report_status}}</li>
+	{% endfor %}
+</p>
+</body>
+</html>
