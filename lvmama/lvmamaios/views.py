@@ -34,7 +34,7 @@ def publish_project(request, pk):
     project = Project.objects.get(pk=pk)
     checkProject = CheckProject(project)
     checkProject.check()
-    return HttpResponse("<html><script type=\"text/javascript\">alert(\"点击发布\"); window.location=\"/lvmamaios/project/"+str(project.id)+"\"</script></html>")
+    return HttpResponse("<html><script type=\"text/javascript\">alert(\"发布完成\"); window.location=\"/lvmamaios/project/"+str(project.id)+"\"</script></html>")
 
 #注册
 def regist(request):
