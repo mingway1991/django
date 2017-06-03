@@ -5,11 +5,11 @@ from django.conf.urls import url
 from lvmamaios import views
 
 urlpatterns = [
-    url(r'^$', views.login, name='login'),
-    url(r'^login/$',views.login,name = 'login'),
-    url(r'^regist/$',views.regist,name = 'regist'),
+    url(r'^$', views.signin, name='signin'),
+    url(r'^signin/$',views.signin,name = 'signin'),
+    url(r'^signup/$',views.signup,name = 'signup'),
     url(r'^index/$',views.index,name = 'index'),
-    url(r'^logout/$',views.logout,name = 'logout'),
+    url(r'^signout/$',views.signout,name = 'signout'),
     url(r'^create_project/$',views.create_project,name = 'create_project'),
     url(r'^project/(?P<pk>[0-9]+)$',views.project), #工程详情页
     url(r'^delete/(?P<pk>[0-9]+)$', views.delete_project), #删除操作的url,后面是正则pk的写法

@@ -37,7 +37,7 @@ def publish_project(request, pk):
     return HttpResponse("<html><script type=\"text/javascript\">alert(\"发布完成\"); window.location=\"/lvmamaios/project/"+str(project.id)+"\"</script></html>")
 
 #注册
-def regist(request):
+def signup(request):
     if request.method == 'POST':
         uf = UserForm(request.POST)
         if uf.is_valid():
@@ -47,13 +47,13 @@ def regist(request):
             #添加到数据库
             user = User(username=username,password=password)
             user.save()
-            return HttpResponse('<html><script type="text/javascript">alert("注册成功"); window.location="/lvmamaios/login/"</script></html>')
+            return HttpResponse('<html><script type="text/javascript">alert("注册成功"); window.location="/lvmamaios/signin/"</script></html>')
     else:
         uf = UserForm()
-    return render(request, 'lvmamaios/regist.html',{'uf':uf})
+    return render(request, 'lvmamaios/signup.html',{'uf':uf})
 
 #登陆
-def login(request):
+def signin(request):
     if request.method == 'POST':
         uf = UserForm(request.POST)
         if uf.is_valid():
@@ -69,11 +69,11 @@ def login(request):
                 response.set_cookie('username',username,3600)
                 return response
             else:
-                #比较失败，返回login
-                return HttpResponse('<html><script type="text/javascript">alert("密码错误"); window.location="/lvmamaios/login/"</script></html>')
+                #比较失败，返回signin
+                return HttpResponse('<html><script type="text/javascript">alert("密码错误"); window.location="/lvmamaios/signin/"</script></html>')
     else:
         uf = UserForm()
-    return render(request,'lvmamaios/login.html',{'uf':uf})
+    return render(request,'lvmamaios/signin.html',{'uf':uf})
 
 #登陆成功
 def index(request):
@@ -82,11 +82,11 @@ def index(request):
     return render(request,'lvmamaios/index.html' ,{'username':username,'projects':projects})
 
 #退出
-def logout(request):
-    response = HttpResponse('logout!')
+def signout(request):
+    response = HttpResponse('signout!')
     #清理cookie里保存username
     response.delete_cookie('username')
-    return render(request,'lvmamaios/logout.html')
+    return render(request,'lvmamaios/signout.html')
 
 #创建工程
 def create_project(request):
