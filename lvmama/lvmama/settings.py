@@ -131,3 +131,5 @@ USE_L10N = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(os.path.dirname(__file__), '../static/').replace('\\','/'),]
+
+LOGIN_URL = '/signin/'

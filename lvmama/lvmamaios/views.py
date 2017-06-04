@@ -8,6 +8,7 @@ from django.http import HttpResponse,HttpResponseRedirect
 from django.template import RequestContext
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django import forms
 from models import Project
 from models import Report
@@ -15,12 +16,14 @@ from models import CheckStep
 from utils.check_project import CheckProject
 
 #删除一条project信息
+@login_required
 def delete_project(request, pk):
     project = Project.objects.get(pk=pk)
     delete = project.delete()
     return HttpResponse('<html><script type="text/javascript">alert("删除成功"); window.location="/lvmamaios/index/"</script></html>')
 
 #点击发布版本
+@login_required
 def publish_project(request, pk):
     project = Project.objects.get(pk=pk)
     checkProject = CheckProject(project)
@@ -67,7 +70,8 @@ def signin(request):
             return HttpResponse('<html><script type="text/javascript">alert("密码错误"); window.location="/lvmamaios/signin/"</script></html>')
     return render(request,'lvmamaios/signin.html',{})
 
-#登陆成功
+#首页
+@login_required
 def index(request):
     username = request.COOKIES.get('username','')
     projects = Project.objects.all()
@@ -75,10 +79,14 @@ def index(request):
 
 #退出
 def signout(request):
+    response = HttpResponse('signout!')
+    #清理cookie里保存username
+    response.delete_cookie('username')
     logout(request)
     return render(request,'lvmamaios/signout.html')
 
 #创建工程
+@login_required
 def create_project(request):
     if request.method == 'POST':
         pname=request.POST.get('pname','')
@@ -97,6 +105,7 @@ def create_project(request):
     return render(request, 'lvmamaios/create_project.html',{'username':username})
 
 #工程
+@login_required
 def project(request, pk):
     if request.method == 'POST':
         pname=request.POST.get('pname','')
@@ -126,6 +135,7 @@ def project(request, pk):
     return render(request,'lvmamaios/project.html',{'username':username,'project':project,'reports':reports,'status_label':status_label})
 
 #报告
+@login_required
 def report(request, pk):
     username = request.COOKIES.get('username','')
     report = Report.objects.get(pk=pk)
