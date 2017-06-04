@@ -32,8 +32,8 @@
 	<form class="form-signin" method = 'post' enctype="multipart/form-data">
 		<h2 class="form-signin-heading">Please sign in</h2>
 		{% csrf_token %}	
-		<label for="inputEmail" class="sr-only">Email address</label>
-		<input type="email" name="username" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+		<label for="inputUserName" class="sr-only">User Name</label>
+		<input type="username" name="username" id="inputUserName" class="form-control" placeholder="User Name" required autofocus>
 		<label for="inputPassword" class="sr-only">Password</label>
 		<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
 		<div class="checkbox">
@@ -47,6 +47,6 @@
 </div>
 <!-- /container -->
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="../../static/bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>

@@ -1,17 +1,108 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>报告</title>
-</head>
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../static/bootstrap/favicon.ico">
+
+    <title>Report</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../static/bootstrap/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../static/css/dashboard.css" rel="stylesheet">
+    <link href="../../static/css/theme.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../static/bootstrap/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../static/bootstrap/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
 <body>
-<a href="http://127.0.0.1:8000/lvmamaios/index">首页</a>
-<br>
-<p>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Lvmama iOS</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+	    <li><a href="http://127.0.0.1:8000/lvmamaios/index">Dashboard</a></li>
+            <li><a href="#">{{username}}</a></li>
+	    <li><a href="http://127.0.0.1:8000/lvmamaios/signout/">Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+ </nav>
+<div class="container theme-showcase" role="main">
+<div class="table-responsive">
+<table class="table table-strped">
+<thread>
+<tr>
+<th>Check Step</th>
+<th>Check Step Description</th>
+<th>Status</th>
+<th>Duration</th>
+</tr>
+</thread>
+<tbody>
 	{% for checkStep in checkSteps %}
-	<li>{{checkStep.step_title}} {{checkStep.step_description}} {{checkStep.step_status}}  {{checkStep.step_duration}}</li>
+{% if checkStep.step_status == "success" %}
+	<tr class="success">
+	<td>{{checkStep.step_title}}</td>
+	<td>{{checkStep.step_description}}</td>
+	<td>{{checkStep.step_status}}</td>
+	<td>{{checkStep.step_duration}} 秒</td>
+	</tr>
+{% elif checkStep.step_status == "fail" %}
+	<tr class="error">
+	<td>{{checkStep.step_title}}</td>
+	<td>{{checkStep.step_description}}</td>
+	<td>{{checkStep.step_status}}</td>
+	<td>{{checkStep.step_duration}} 秒</td>
+	</tr>
+{% else %}
+	<tr class="warning">
+	<td>{{checkStep.step_title}}</td>
+	<td>{{checkStep.step_description}}</td>
+	<td>{{checkStep.step_status}}</td>
+	<td>{{checkStep.step_duration}} 秒</td>
+	</tr>
+{% endif %}
 	{% endfor %}
-</p>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../static/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../static/bootstrap/assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../static/bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>

@@ -18,10 +18,10 @@
     <link href="../../static/bootstrap/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/static/css/dashboard.css" rel="stylesheet">
+    <link href="../../static/css/dashboard.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="../../static/bootstrap/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../static/bootstrap/assets/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -63,7 +63,6 @@
           </ul>
         </div>
 
-
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Dashboard</h1>
 
@@ -72,8 +71,21 @@
 	{% for project in projects %}
 	<div class="col-xs-6 col-sm-3 placeholder">
               <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4><a href="http://127.0.0.1:8000/lvmamaios/project/{{ project.id }}">{{project.project_name}}</a>  <a href="http://127.0.0.1:8000/lvmamaios/delete/{{ project.id }}">delete</a></h4>
-              <span class="text-muted">{{project.project_status}}</span>
+              <h4><a href="http://127.0.0.1:8000/lvmamaios/project/{{ project.id }}">{{project.project_name}}</a></h4>
+		{% if project.project_status == "success" %}
+		<div class="label label-success">
+	   	    <strong>{{project.project_status}}</strong>
+        	</div>
+		{% elif project.project_status == "fail" %}
+		<div class="label label-danger">
+	   	    <strong>{{project.project_status}}</strong>
+        	</div>
+		{% else %}
+		<div class="label label-warning">
+	   	    <strong>{{project.project_status}}</strong>
+        	</div>
+		{% endif %}
+	      <button type="btn" class="btn btn-sm btn-link"><a href="http://127.0.0.1:8000/lvmamaios/delete/{{ project.id }}">delete</a></button>
        </div>
 	{% endfor %}
           </div>
@@ -84,10 +96,10 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../static/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script src="../../static/bootstrap/assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../../static/bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
