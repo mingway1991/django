@@ -9,6 +9,7 @@ urlpatterns = [
     url(r'^signin/$',signin,name = 'signin'),
     #url(r'^signup/$',signup,name = 'signup'),
     url(r'^index/$',index,name = 'index'),
+    url(r'^article_list/$',article_list,name = 'article_list'),
     url(r'^signout/$',signout,name = 'signout'),
     url(r'^create_project/$',create_project,name = 'create_project'),
     url(r'^project/(?P<pk>[0-9]+)$',project), #工程详情页

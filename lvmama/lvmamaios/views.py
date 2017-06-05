@@ -3,7 +3,7 @@
 
 from __future__ import unicode_literals
 
-from django.shortcuts import render
+from django.shortcuts import render,render_to_response
 from django.http import HttpResponse,HttpResponseRedirect
 from django.template import RequestContext
 from django.contrib.auth.models import User
@@ -16,6 +16,16 @@ from models import Project
 from models import Report
 from models import CheckStep
 from utils.check_project import CheckProject
+
+#403
+def permission_denied(request):
+    return render_to_response("403.html")
+#404
+def page_not_found(request):
+    return render_to_response("404.html")
+#500
+def page_error(request):
+    return render_to_response("500.html")
 
 #删除一条project信息
 @login_required
@@ -161,3 +171,9 @@ def report(request, pk):
     report = Report.objects.get(pk=pk)
     checkSteps = CheckStep.objects.all().filter(report__exact = report)
     return render(request,'lvmamaios/report.html',{'username':username,'checkSteps':checkSteps})
+
+#文章列表
+@login_required
+def article_list(request):
+    username = request.user.username
+    return render(request,'lvmamaios/article_list.html',{'username':username})

@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../static/bootstrap/favicon.ico">
 
-    <title>Dashboard</title>
+    <title>Article List</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -44,9 +44,6 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-          {% if can_add_project %}
-	         <li><a href="http://127.0.0.1:8000/lvmamaios/create_project/">Create Project</a></li>
-          {% endif %}
             <li><a href="#">{{username}}</a></li>
 	    <li><a href="http://127.0.0.1:8000/lvmamaios/signout/">Sign Out</a></li>
           </ul>
@@ -61,41 +58,13 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview<span class="sr-only">(current)</span></a></li>
-            <li><a href="http://127.0.0.1:8000/lvmamaios/article_list">Articles<span class="sr-only">(current)</span></a></li>
+            <li><a href="http://127.0.0.1:8000/lvmamaios/index">Overview<span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="#">Articles<span class="sr-only">(current)</span></a></li>
           </ul>
         </div>
-
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Dashboard</h1>
-
-          <div class="row placeholders">
-
-	{% for project in projects %}
-	<div class="col-xs-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4><a href="http://127.0.0.1:8000/lvmamaios/project/{{ project.id }}">{{project.project_name}}</a></h4>
-		{% if project.project_status == "success" %}
-		<div class="label label-success">
-	   	    <strong>{{project.project_status}}</strong>
-        	</div>
-		{% elif project.project_status == "fail" %}
-		<div class="label label-danger">
-	   	    <strong>{{project.project_status}}</strong>
-        	</div>
-		{% else %}
-		<div class="label label-warning">
-	   	    <strong>{{project.project_status}}</strong>
-        	</div>
-		{% endif %}
-    {% if can_add_project %}
-	      <button type="btn" class="btn btn-sm btn-link"><a href="http://127.0.0.1:8000/lvmamaios/delete/{{ project.id }}">delete</a></button>
-    {% endif %}
-       </div>
-	{% endfor %}
-          </div>
+          <h1 class="page-header">Article List</h1>
 </div>
-
 <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
