@@ -64,18 +64,13 @@ def signin(request):
             login(request, user)  
             #比较成功，跳转index
             response = HttpResponseRedirect('/lvmamaios/index/')
+            #将username写入浏览器cookie,失效时间为3600
+            response.set_cookie('username',username,3600)
             return response
         else:
             #比较失败，返回signin
             return HttpResponse('<html><script type="text/javascript">alert("密码错误"); window.location="/lvmamaios/signin/"</script></html>')
     return render(request,'lvmamaios/signin.html',{})
-
-#首页
-@login_required
-def index(request):
-    username = request.COOKIES.get('username','')
-    projects = Project.objects.all()
-    return render(request,'lvmamaios/index.html' ,{'username':username,'projects':projects})
 
 #退出
 def signout(request):
@@ -84,6 +79,13 @@ def signout(request):
     response.delete_cookie('username')
     logout(request)
     return render(request,'lvmamaios/signout.html')
+
+#首页
+@login_required
+def index(request):
+    username = request.COOKIES.get('username','')
+    projects = Project.objects.all()
+    return render(request,'lvmamaios/index.html' ,{'username':username,'projects':projects})
 
 #创建工程
 @login_required
