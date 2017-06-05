@@ -5,7 +5,7 @@ from django.conf.urls import url
 from lvmamaios.views import *
 
 urlpatterns = [
-    url(r'^$', signin, name='signin'),
+    url(r'^$', index, name='index'),
     url(r'^signin/$',signin,name = 'signin'),
     url(r'^signup/$',signup,name = 'signup'),
     url(r'^index/$',index,name = 'index'),
