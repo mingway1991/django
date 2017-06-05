@@ -9,6 +9,7 @@ from django.template import RequestContext
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import permission_required 
 from django import forms
 from models import Project
 from models import Report
@@ -17,6 +18,7 @@ from utils.check_project import CheckProject
 
 #删除一条project信息
 @login_required
+@permission_required('lvmamaios.can_delete_project')
 def delete_project(request, pk):
     project = Project.objects.get(pk=pk)
     delete = project.delete()
@@ -64,8 +66,6 @@ def signin(request):
             login(request, user)  
             #比较成功，跳转index
             response = HttpResponseRedirect('/lvmamaios/index/')
-            #将username写入浏览器cookie,失效时间为3600
-            response.set_cookie('username',username,3600)
             return response
         else:
             #比较失败，返回signin
@@ -74,21 +74,25 @@ def signin(request):
 
 #退出
 def signout(request):
-    response = HttpResponse('signout!')
-    #清理cookie里保存username
-    response.delete_cookie('username')
     logout(request)
     return render(request,'lvmamaios/signout.html')
 
 #首页
 @login_required
 def index(request):
-    username = request.COOKIES.get('username','')
+    username = request.user.username
     projects = Project.objects.all()
-    return render(request,'lvmamaios/index.html' ,{'username':username,'projects':projects})
+    can_add_project = None
+    can_delete_project = None
+    if request.user.has_perm('lvmamaios.can_add_project'):
+        can_add_project = "True"
+    if request.user.has_perm('lvmamaios.can_delete_project'):
+        can_delete_project = "True"
+    return render(request,'lvmamaios/index.html' ,{'username':username,'projects':projects,'can_add_project':can_add_project,'can_delete_project':can_delete_project})
 
 #创建工程
 @login_required
+@permission_required('lvmamaios.can_add_project')
 def create_project(request):
     if request.method == 'POST':
         pname=request.POST.get('pname','')
@@ -134,7 +138,10 @@ def project(request, pk):
     else:
         status_label = "label label-warning"
     
-    return render(request,'lvmamaios/project.html',{'username':username,'project':project,'reports':reports,'status_label':status_label})
+    can_change_project = None
+    if request.user.has_perm('lvmamaios.can_change_project'):
+        can_change_project = "True"
+    return render(request,'lvmamaios/project.html',{'username':username,'project':project,'reports':reports,'status_label':status_label,'can_change_project':can_change_project})
 
 #报告
 @login_required

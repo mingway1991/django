@@ -44,7 +44,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-	    <li><a href="http://127.0.0.1:8000/lvmamaios/create_project/">Create Project</a></li>
+          {% if can_add_project %}
+	         <li><a href="http://127.0.0.1:8000/lvmamaios/create_project/">Create Project</a></li>
+          {% endif %}
             <li><a href="#">{{username}}</a></li>
 	    <li><a href="http://127.0.0.1:8000/lvmamaios/signout/">Sign Out</a></li>
           </ul>
@@ -85,7 +87,9 @@
 	   	    <strong>{{project.project_status}}</strong>
         	</div>
 		{% endif %}
+    {% if can_add_project %}
 	      <button type="btn" class="btn btn-sm btn-link"><a href="http://127.0.0.1:8000/lvmamaios/delete/{{ project.id }}">delete</a></button>
+    {% endif %}
        </div>
 	{% endfor %}
           </div>
