@@ -15,7 +15,7 @@ class CheckProject(object):
 	def __init__(self, project, user):
 		self.project = project
 		self.user = user
-		self.work_folder = "/Users/shimingwei/Desktop/checkProject/"+self.project.project_name
+		self.work_folder = "/Users/shimingwei/Desktop/checkProject"+self.project.project_name+datetime.utcnow().strftime('%Y%m%d%H%m%s')+"/"
 		self.archive_folder = self.work_folder+"/archiveFolder"
 
 	def check(self):
@@ -37,53 +37,73 @@ class CheckProject(object):
 		report.save()
 		#下载工程
 		beginTime = datetime.utcnow()
+		step = generateCheckStep("unknow","clone project","clone project",0,report)
 		result = self.cloneProject()
 		endTime = datetime.utcnow()
 		delta = endTime-beginTime
 		if result:
-			generateCheckStep("success","clone project","clone project",delta.total_seconds(),report)
+			step.step_status = "success"
+			step.step_duration = delta.total_seconds()
+			step.save()
 			print "clone successful!"
 			beginTime = datetime.utcnow()
+			step = generateCheckStep("unknow","pod install","pod install",0,report)
 			result = self.podInstall()
 			endTime = datetime.utcnow()
 			delta = endTime-beginTime
 			if result:
-				generateCheckStep("success","pod install","pod install",delta.total_seconds(),report)
+				step.step_status = "success"
+				step.step_duration = delta.total_seconds()
+				step.save()
 				print "pod install successful!"
 				beginTime = datetime.utcnow()
+				step = generateCheckStep("unknow","archive","archive",0,report)
 				result = self.archive()
 				endTime = datetime.utcnow()
 				delta = endTime-beginTime
 				if result:
-					generateCheckStep("success","archive","archive",delta.total_seconds(),report)
+					step.step_status = "success"
+					step.step_duration = delta.total_seconds()
+					step.save()
 					print "archive successful!"
 					beginTime = datetime.utcnow()
+					step = generateCheckStep("unknow","upload binary","upload binary",0,report)
 					result = self.uploadBinary()
 					endTime = datetime.utcnow()
 					delta = endTime-beginTime
 					if result:
-						generateCheckStep("success","upload binary","upload binary",delta.total_seconds(),report)
-						self.project.project_status = "success"
+						step.step_status = "success"
+						step.step_duration = delta.total_seconds()
+						step.save()
 						report.report_status = "success"
+						self.project.project_status = "success"
 						print "upload binary successful!"
 					else:
-						generateCheckStep("fail","upload binary","upload binary",delta.total_seconds(),report)
-						self.project.project_status = "fail"
+						step.step_status = "fail"
+						step.step_duration = delta.total_seconds()
+						step.save()
 						report.report_status = "fail"
+						self.project.project_status = "fail"
 						print "upload binary failed!"
 				else:
-					generateCheckStep("fail","archive","archive",delta.total_seconds(),report)
-					self.project.project_status = "fail"
+					step.step_status = "fail"
+					step.step_duration = delta.total_seconds()
+					step.save()
 					report.report_status = "fail"
+					self.project.project_status = "fail"
 					print "archive failed!"
 			else:
-				generateCheckStep("fail","pod install","pod install",delta.total_seconds(),report)
-				self.project.project_status = "fail"
+				step.step_status = "fail"
+				step.step_duration = delta.total_seconds()
+				step.save()
 				report.report_status = "fail"
+				self.project.project_status = "fail"
 				print "pod install failed!"
 			os.system("rm -rf "+self.work_folder)
 		else:
-			generateCheckStep("fail","clone project","clone project",delta.total_seconds(),report)
+			step.step_status = "fail"
+			step.step_duration = delta.total_seconds()
+			step.save()
 			report.report_status = "fail"
 			self.project.project_status = "fail"
 			print "clone failed!"
