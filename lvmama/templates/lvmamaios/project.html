@@ -34,6 +34,7 @@
     <![endif]-->
   </head>
 <body>
+<!-- 导航条 -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -54,6 +55,7 @@
         </div>
       </div>
  </nav>
+<!-- 内容 -->
 <div class="container theme-showcase" role="main">
      <h3>
 	status:
@@ -95,6 +97,36 @@
 	<li><a href="http://127.0.0.1:8000/lvmamaios/report/{{ report.id }}">{{report.timestamp}}</a> <strong>status:</strong>{{report.report_status}} <strong>author:</strong>{{report.author.username}}</li>
 	{% endfor %}
 </div>
+<!-- 添加分页 -->
+{% if paginator.num_pages > 1 %}
+<div class="container">
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    {% if reports.has_previous %}
+    <li>
+      <a href="?page={{ reports.previous_page_number }}" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    {% endif %}
+    {% for page in reports.paginator.page_range %}
+    {% if reports.number == page %}
+    <li><a href="#">current:{{page}}</a></li>
+    {% else %}
+    <li><a href="?page={{ page }}">{{page}}</a></li>
+    {% endif %}
+    {% endfor %}
+    <li>
+    {% if reports.has_next %}
+      <a href="?page={{ reports.next_page_number }}" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+    {% endif %}
+  </ul>
+</nav>
+</div>
+{% endif %}
 <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

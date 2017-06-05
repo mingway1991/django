@@ -9,7 +9,8 @@ from django.template import RequestContext
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.decorators import permission_required 
+from django.contrib.auth.decorators import permission_required
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django import forms
 from models import Project
 from models import Report
@@ -107,7 +108,7 @@ def create_project(request):
                     project_branch=pbranch,)
         project.save()
         return HttpResponse('<html><script type="text/javascript">alert("创建成功"); window.location="/lvmamaios/index/"</script></html>')
-    username = request.COOKIES.get('username','')
+    username = request.user.username
     return render(request, 'lvmamaios/create_project.html',{'username':username})
 
 #工程
@@ -126,10 +127,20 @@ def project(request, pk):
         project.project_branch = pbranch
         project.save()
         return HttpResponse("<html><script type=\"text/javascript\">alert(\"更新成功\"); window.location=\"/lvmamaios/project/"+str(project.id)+"\"</script></html>")
-    username = request.COOKIES.get('username','')
+    username = request.user.username
     project = Project.objects.get(pk=pk)
     reports = Report.objects.all().filter(project__exact = project).order_by('-timestamp')
-
+    paginator = Paginator(reports, 20) # Show 20 contacts per page
+    page = request.GET.get('page')
+    try:
+        reports = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        reports = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        reports = paginator.page(paginator.num_pages)
+    
     status_label = ""
     if project.project_status == "success":
         status_label = "label label-success"
@@ -146,7 +157,7 @@ def project(request, pk):
 #报告
 @login_required
 def report(request, pk):
-    username = request.COOKIES.get('username','')
+    username = request.user.username
     report = Report.objects.get(pk=pk)
     checkSteps = CheckStep.objects.all().filter(report__exact = report)
     return render(request,'lvmamaios/report.html',{'username':username,'checkSteps':checkSteps})
