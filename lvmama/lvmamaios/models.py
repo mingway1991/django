@@ -20,5 +20,5 @@ class CheckStep(models.Model):
 	step_status = models.CharField(max_length=50,default="Unknow")
 	step_title = models.CharField(max_length=50)
 	step_description = models.TextField()
-	step_duration = models.DecimalField(blank=True, null=True, max_digits=19, decimal_places=0)
+	step_duration = models.DecimalField(blank=True, null=True, max_digits=19, decimal_places=2)
 	report = models.ForeignKey('Report',on_delete=models.CASCADE)
