@@ -30,17 +30,16 @@
 <body>
 <div class="container">
 	<form class="form-signin" method = 'post' enctype="multipart/form-data">
-		<h2 class="form-signin-heading">Please sign up</h2>
+		<h3 class="form-signin-heading">Please sign up or <a href="http://127.0.0.1:8000/lvmamaios/signin/">Sign In</a></h3>
 		{% csrf_token %}
 		<label for="inputUserName" class="sr-only">UserName</label>
-		<input type="username" name="username" id="inputUserName" class="form-control" placeholder="User Name" required autofocus>
+		<input type="username" name="username" id="inputUserName" class="form-control" placeholder="UserName" required autofocus>
+		<label for="inputEmail" class="sr-only">Email address</label>
+		<input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required>
 		<label for="inputPassword" class="sr-only">Password</label>
 		<input type="password" name="password1" id="inputPassword" class="form-control" placeholder="Password" required>
 		<label for="inputPassword" class="sr-only">Password</label>
 		<input type="password" name="password2" id="inputPassword" class="form-control" placeholder="Confirm Password" required>
-		<label for="inputEmail" class="sr-only">Email address</label>
-		<input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required>
-		<a href="http://127.0.0.1:8000/lvmamaios/signin/">Sign In</a>
 		<button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
 	</form>
 </div>

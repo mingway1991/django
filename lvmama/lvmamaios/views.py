@@ -26,7 +26,7 @@ def delete_project(request, pk):
 @login_required
 def publish_project(request, pk):
     project = Project.objects.get(pk=pk)
-    checkProject = CheckProject(project)
+    checkProject = CheckProject(project,request.user)
     checkProject.check()
     return HttpResponse("<html><script type=\"text/javascript\">alert(\"发布完成\"); window.location=\"/lvmamaios/project/"+str(project.id)+"\"</script></html>")
 

@@ -30,7 +30,7 @@
 <body>
 <div class="container">
 	<form class="form-signin" method = 'post' enctype="multipart/form-data">
-		<h2 class="form-signin-heading">Please sign in</h2>
+		<h3 class="form-signin-heading">Please sign in or <a href="http://127.0.0.1:8000/lvmamaios/signup/">Sign Up</a></h3>
 		{% csrf_token %}	
 		<label for="inputUserName" class="sr-only">User Name</label>
 		<input type="username" name="username" id="inputUserName" class="form-control" placeholder="User Name" required autofocus>
@@ -41,7 +41,6 @@
 			<input type="checkbox" value="remember-me"> Remember me
 			</label>
 		</div>
-		<a href="http://127.0.0.1:8000/lvmamaios/signup/">Sign Up</a>
 		<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 	</form>
 </div>

@@ -11,8 +11,10 @@ class CheckProject(object):
 	work_folder = ""
 	archive_folder = ""
 	project = None
-	def __init__(self, project):
+	user = None
+	def __init__(self, project, user):
 		self.project = project
+		self.user = user
 		self.work_folder = "/Users/shimingwei/Desktop/checkProject/"+self.project.project_name
 		self.archive_folder = self.work_folder+"/archiveFolder"
 
@@ -31,6 +33,7 @@ class CheckProject(object):
 		#创建报告
 		report = Report()
 		report.project = self.project
+		report.author = self.user
 		report.save()
 		#下载工程
 		beginTime = datetime.utcnow()

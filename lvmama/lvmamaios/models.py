@@ -3,6 +3,7 @@
 
 from __future__ import unicode_literals
 
+from django.conf import settings
 from django.db import models
 
 class Project(models.Model):
@@ -13,6 +14,7 @@ class Project(models.Model):
 
 class Report(models.Model):
 	project = models.ForeignKey('Project',on_delete=models.CASCADE)
+	author = models.ForeignKey(settings.AUTH_USER_MODEL,default=None)
 	report_status = models.CharField(max_length=50,default="Unknow")
 	timestamp = models.DateTimeField(auto_now=True)
 
