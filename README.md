@@ -12,3 +12,10 @@
 安装markdown
 
 <code>sudo pip install markdown</code>
+
+# 使用
+终端cd到工程目录下，再cd到lvmama文件夹下，执行
+
+<code>python manage.py runserver</code>
+
+最后在浏览器中打开http://127.0.0.1:8000/lvmamaios/
