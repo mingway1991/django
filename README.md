@@ -4,7 +4,11 @@
 
 # 安装
 Python 2.7
+
 安装django
+
 <code>sudo pip install Django</code>
+
 安装markdown
+
 <code>sudo pip install markdown</code>
