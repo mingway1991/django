@@ -3,7 +3,7 @@
 提供发表文章功能，支持markdown语法
 
 # 安装
-Python 2.7
+环境：Python 2.7
 
 安装django
 
