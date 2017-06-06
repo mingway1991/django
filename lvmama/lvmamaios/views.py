@@ -15,7 +15,10 @@ from django import forms
 from models import Project
 from models import Report
 from models import CheckStep
+from models import Article
 from utils.check_project import CheckProject
+import markdown
+from django.utils.safestring import mark_safe
 
 #403
 def permission_denied(request):
@@ -176,4 +179,44 @@ def report(request, pk):
 @login_required
 def article_list(request):
     username = request.user.username
-    return render(request,'lvmamaios/article_list.html',{'username':username})
+    articles = Article.objects.all().order_by('-timestamp')
+    paginator = Paginator(articles, 20) # Show 20 contacts per page
+    page = request.GET.get('page')
+    try:
+        articles = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        articles = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        articles = paginator.page(paginator.num_pages)
+    return render(request,'lvmamaios/article_list.html',{'username':username, 'articles':articles})
+
+#创建文章
+@login_required
+def create_article(request):
+    if request.method == 'POST':
+        atitle=request.POST.get('atitle','')
+        acontent=request.POST.get('acontent','')
+        if atitle.strip() == "" or acontent.strip() == "":
+            return HttpResponse("<html><script type=\"text/javascript\">alert(\"存在空字段\"); window.location=\"/lvmamaios/create_article\"</script></html>")
+        #添加到数据库
+        article = Article(article_title=atitle,
+                    article_content=acontent,
+                    author=request.user,)
+        article.save()
+        return HttpResponse('<html><script type="text/javascript">alert("创建成功"); window.location="/lvmamaios/article_list/"</script></html>')
+    username = request.user.username
+    return render(request, 'lvmamaios/create_article.html',{'username':username})
+
+@login_required
+def article(request, pk):
+    article = Article.objects.get(pk=pk)
+    username = request.user.username
+    article.article_content = mark_safe(markdown.markdown(article.article_content,
+                                  extensions=[
+                                     'markdown.extensions.extra',
+                                     'markdown.extensions.codehilite',
+                                     'markdown.extensions.toc',
+                                  ]))
+    return render(request,'lvmamaios/article.html',{'username':username,'article':article})

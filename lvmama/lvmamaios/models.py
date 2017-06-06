@@ -24,3 +24,9 @@ class CheckStep(models.Model):
 	step_description = models.TextField()
 	step_duration = models.DecimalField(blank=True, null=True, max_digits=19, decimal_places=2)
 	report = models.ForeignKey('Report',on_delete=models.CASCADE)
+
+class Article(models.Model):
+	article_title = models.CharField(max_length=50)
+	article_content = models.TextField()
+	timestamp = models.DateTimeField(auto_now=True)
+	author = models.ForeignKey(settings.AUTH_USER_MODEL,default=None)

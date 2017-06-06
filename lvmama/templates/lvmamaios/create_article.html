@@ -9,19 +9,22 @@
     <meta name="author" content="">
     <link rel="icon" href="../../static/bootstrap/favicon.ico">
 
-    <title>Article List</title>
+    <title>Create Article</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../../static/bootstrap/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="../../static/css/dashboard.css" rel="stylesheet">
+    <link href="../../static/css/theme.css" rel="stylesheet">
+
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../static/bootstrap/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../static/bootstrap/assets/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -44,62 +47,23 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-              <li><a href="http://127.0.0.1:8000/lvmamaios/create_article/">Create Article</a></li>
-              <li><a href="#">{{username}}</a></li>
-	            <li><a href="http://127.0.0.1:8000/lvmamaios/signout/">Sign Out</a></li>
+	    <li><a href="http://127.0.0.1:8000/lvmamaios/article_list">Article List</a></li>
+            <li><a href="#">{{username}}</a></li>
+	    <li><a href="http://127.0.0.1:8000/lvmamaios/signout/">Sign Out</a></li>
           </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
         </div>
       </div>
  </nav>
-
-<div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li><a href="http://127.0.0.1:8000/lvmamaios/index">Overview<span class="sr-only">(current)</span></a></li>
-            <li class="active"><a href="#">Articles<span class="sr-only">(current)</span></a></li>
-          </ul>
-        </div>
-<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Article List</h1>
-          <p>
-          {% for article in articles %}
-          <li><a href="http://127.0.0.1:8000/lvmamaios/article/{{ article.id }}">{{article.article_title}}</a></li>
-          {% endfor %}
-          </p>
-<!-- 添加分页 -->
-{% if articles.paginator.num_pages > 1 %}
-<div class="container">
-<nav aria-label="Page navigation">
-  <ul class="pagination">
-    {% if articles.has_previous %}
-    <li>
-      <a href="?page={{ articles.previous_page_number }}" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    {% endif %}
-    {% for page in articles.paginator.page_range %}
-    {% if articles.number == page %}
-    <li><a href="#">current:{{page}}</a></li>
-    {% else %}
-    <li><a href="?page={{ page }}">{{page}}</a></li>
-    {% endif %}
-    {% endfor %}
-    {% if articles.has_next %}
-    <li>
-      <a href="?page={{ articles.next_page_number }}" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-    {% endif %}
-  </ul>
-</nav>
-</div>
-{% endif %}
+<div class="container theme-showcase" role="main">
+<form method = 'post' enctype="multipart/form-data">
+{% csrf_token %}
+<strong>Article Title：</strong><input type="text" class="form-control" name="atitle"/>
+<br>
+<div class="form-group"> 
+    <strong>Article Content：(支持Markdown语法)</strong><textarea class="form-control" rows="5" name="acontent"></textarea> 
+</div> 
+<button type="submit" class="btn btn-default">Create</button>
+</form>
 </div>
 <!-- Bootstrap core JavaScript
     ================================================== -->
