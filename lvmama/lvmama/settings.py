@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'qay)01us6*qa(ma+=6-d-@8bqb6u*6^c&^mwhrt8u2wpi6sw-s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -87,7 +87,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'lvmama.wsgi.application'
 
-SITE_ID = 1
+# SITE_ID = 1
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
