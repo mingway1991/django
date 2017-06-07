@@ -38,6 +38,14 @@ def delete_project(request, pk):
     delete = project.delete()
     return HttpResponse('<html><script type="text/javascript">alert("删除成功"); window.location="/lvmamaios/index/"</script></html>')
 
+#删除一条article信息
+@login_required
+@permission_required('lvmamaios.can_delete_article')
+def delete_article(request, pk):
+    article = Article.objects.get(pk=pk)
+    delete = article.delete()
+    return HttpResponse('<html><script type="text/javascript">alert("删除成功"); window.location="/lvmamaios/article_list/"</script></html>')
+
 #点击发布版本
 @login_required
 def publish_project(request, pk):
@@ -190,7 +198,10 @@ def article_list(request):
     except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
         articles = paginator.page(paginator.num_pages)
-    return render(request,'lvmamaios/article_list.html',{'username':username, 'articles':articles})
+    can_delete_article = None
+    if request.user.has_perm('lvmamaios.can_delete_article'):
+        can_delete_article = "True"
+    return render(request,'lvmamaios/article_list.html',{'username':username, 'articles':articles, 'can_delete_article':can_delete_article})
 
 #创建文章
 @login_required

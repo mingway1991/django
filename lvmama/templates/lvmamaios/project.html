@@ -111,7 +111,7 @@
     {% endif %}
     {% for page in reports.paginator.page_range %}
     {% if reports.number == page %}
-    <li><a href="#">current:{{page}}</a></li>
+    <li><a href="#"><font color="#000000">{{page}}</font></a></li>
     {% else %}
     <li><a href="?page={{ page }}">{{page}}</a></li>
     {% endif %}
