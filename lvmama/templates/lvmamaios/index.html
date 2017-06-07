@@ -45,10 +45,10 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
           {% if can_add_project %}
-	         <li><a href="http://127.0.0.1:8000/lvmamaios/create_project/">Create Project</a></li>
+	         <li><a href="/lvmamaios/create_project/">Create Project</a></li>
           {% endif %}
             <li><a href="#">{{username}}</a></li>
-	    <li><a href="http://127.0.0.1:8000/lvmamaios/signout/">Sign Out</a></li>
+	    <li><a href="/lvmamaios/signout/">Sign Out</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
@@ -62,7 +62,7 @@
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <li class="active"><a href="#">Overview<span class="sr-only">(current)</span></a></li>
-            <li><a href="http://127.0.0.1:8000/lvmamaios/article_list">Articles<span class="sr-only">(current)</span></a></li>
+            <li><a href="/lvmamaios/article_list">Articles<span class="sr-only">(current)</span></a></li>
           </ul>
         </div>
 
@@ -74,7 +74,7 @@
 	{% for project in projects %}
 	<div class="col-xs-6 col-sm-3 placeholder">
               <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4><a href="http://127.0.0.1:8000/lvmamaios/project/{{ project.id }}">{{project.project_name}}</a></h4>
+              <h4><a href="/lvmamaios/project/{{ project.id }}">{{project.project_name}}</a></h4>
 		{% if project.project_status == "success" %}
 		<div class="label label-success">
 	   	    <strong>{{project.project_status}}</strong>
@@ -89,7 +89,7 @@
         	</div>
 		{% endif %}
     {% if can_add_project %}
-	      <button type="btn" class="btn btn-sm btn-link"><a href="http://127.0.0.1:8000/lvmamaios/delete_project/{{ project.id }}">delete</a></button>
+	      <button type="btn" class="btn btn-sm btn-link"><a href="/lvmamaios/delete_project/{{ project.id }}">delete</a></button>
     {% endif %}
        </div>
 	{% endfor %}

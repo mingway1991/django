@@ -48,9 +48,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-	    <li><a href="http://127.0.0.1:8000/lvmamaios/index">Dashboard</a></li>
+	    <li><a href="/lvmamaios/index">Dashboard</a></li>
             <li><a href="#">{{username}}</a></li>
-	    <li><a href="http://127.0.0.1:8000/lvmamaios/signout/">Sign Out</a></li>
+	    <li><a href="/lvmamaios/signout/">Sign Out</a></li>
           </ul>
         </div>
       </div>
@@ -92,9 +92,9 @@
   {% endif %}
 	</form>
 	<br>
-	<h3><a href="http://127.0.0.1:8000/lvmamaios/publish/{{project.id}}">Publish</a></h3>
+	<h3><a href="/lvmamaios/publish/{{project.id}}">Publish</a></h3>
 	{% for report in reports %}
-	<li><a href="http://127.0.0.1:8000/lvmamaios/report/{{ report.id }}">{{report.timestamp}}</a> <strong>status:</strong>{{report.report_status}} <strong>author:</strong>{{report.author.username}}</li>
+	<li><a href="/lvmamaios/report/{{ report.id }}">{{report.timestamp}}</a> <strong>status:</strong>{{report.report_status}} <strong>author:</strong>{{report.author.username}}</li>
 	{% endfor %}
 </div>
 <!-- 添加分页 -->

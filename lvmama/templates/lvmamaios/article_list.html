@@ -44,9 +44,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-              <li><a href="http://127.0.0.1:8000/lvmamaios/create_article/">Create Article</a></li>
+              <li><a href="/lvmamaios/create_article/">Create Article</a></li>
               <li><a href="#">{{username}}</a></li>
-	            <li><a href="http://127.0.0.1:8000/lvmamaios/signout/">Sign Out</a></li>
+	            <li><a href="/lvmamaios/signout/">Sign Out</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
@@ -59,7 +59,7 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li><a href="http://127.0.0.1:8000/lvmamaios/index">Overview<span class="sr-only">(current)</span></a></li>
+            <li><a href="/lvmamaios/index">Overview<span class="sr-only">(current)</span></a></li>
             <li class="active"><a href="#">Articles<span class="sr-only">(current)</span></a></li>
           </ul>
         </div>
@@ -77,11 +77,11 @@
     </tr>
     {% for article in articles %}
     <tr>  
-      <td style="text-align:center; " onclick="tdclick(this)"><a href="http://127.0.0.1:8000/lvmamaios/article/{{ article.id }}">{{article.article_title}}</a></td>  
+      <td style="text-align:center; " onclick="tdclick(this)"><a href="/lvmamaios/article/{{ article.id }}">{{article.article_title}}</a></td>  
       <td style="text-align:center; " onclick="tdclick(this)">{{article.author.username}}</td>
       {% if can_delete_article %}
       <td style="text-align:center; " onclick="deletetr(this)">  
-        <button type="button"  class="btn btn-xs btn-link"><a href="http://127.0.0.1:8000/lvmamaios/delete_article/{{ article.id }}">删除</a></button>  
+        <button type="button"  class="btn btn-xs btn-link"><a href="/lvmamaios/delete_article/{{ article.id }}">删除</a></button>  
       </td>
       {% endif %}
     </tr>
