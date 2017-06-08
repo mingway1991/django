@@ -16,6 +16,7 @@ class Report(models.Model):
 	project = models.ForeignKey('Project',on_delete=models.CASCADE)
 	author = models.ForeignKey(settings.AUTH_USER_MODEL,default=None)
 	report_status = models.CharField(max_length=50,default="Unknow")
+	log = models.TextField(default="")
 	timestamp = models.DateTimeField(auto_now=True)
 
 class CheckStep(models.Model):

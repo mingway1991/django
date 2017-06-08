@@ -19,6 +19,7 @@ from models import Article
 from utils.check_project import CheckProject
 import markdown
 from django.utils.safestring import mark_safe
+from lvmamaios.task import check
 
 #403
 def permission_denied(request):
@@ -50,8 +51,14 @@ def delete_article(request, pk):
 @login_required
 def publish_project(request, pk):
     project = Project.objects.get(pk=pk)
-    checkProject = CheckProject(project,request.user)
-    checkProject.check()
+    #创建报告
+    report = Report()
+    report.project = project
+    report.author = request.user
+    report.save()
+    print('before run_test_suit')
+    check.delay(project.id,report.id)
+    print('after run_test_suit')
     return HttpResponse("<html><script type=\"text/javascript\">alert(\"发布完成\"); window.location=\"/lvmamaios/project/"+str(project.id)+"\"</script></html>")
 
 #注册
@@ -181,7 +188,7 @@ def report(request, pk):
     username = request.user.username
     report = Report.objects.get(pk=pk)
     checkSteps = CheckStep.objects.all().filter(report__exact = report)
-    return render(request,'lvmamaios/report.html',{'username':username,'checkSteps':checkSteps})
+    return render(request,'lvmamaios/report.html',{'username':username,'report':report,'checkSteps':checkSteps})
 
 #文章列表
 @login_required
@@ -230,4 +237,29 @@ def article(request, pk):
                                      'markdown.extensions.codehilite',
                                      'markdown.extensions.toc',
                                   ]))
-    return render(request,'lvmamaios/article.html',{'username':username,'article':article})
+    can_change_article = None
+    if request.user.has_perm('lvmamaios.can_change_article'):
+        can_change_article = "True"
+    can_delete_article = None
+    if request.user.has_perm('lvmamaios.can_delete_article'):
+        can_delete_article = "True"
+    return render(request,'lvmamaios/article.html',{'username':username,'article':article,'can_change_article':can_change_article,'can_delete_article':can_delete_article})
+
+#修改文章
+@login_required
+@permission_required('lvmamaios.can_change_article')
+def edit_article(request,pk):
+    article = Article.objects.get(pk=pk)
+    if request.method == 'POST':
+        atitle=request.POST.get('atitle','')
+        acontent=request.POST.get('acontent','')
+        if atitle.strip() == "" or acontent.strip() == "":
+            username = request.user.username
+            return render(request, 'lvmamaios/edit_article.html',{'username':username,'article':article})
+        #添加到数据库
+        article.article_title = atitle
+        article.article_content = acontent
+        article.save()
+        return HttpResponse("<html><script type=\"text/javascript\">alert(\"更新成功\"); window.location=\"/lvmamaios/article/"+str(article.id)+"\"</script></html>\"")
+    username = request.user.username
+    return render(request, 'lvmamaios/edit_article.html',{'username':username,'article':article})

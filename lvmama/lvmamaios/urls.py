@@ -19,4 +19,5 @@ urlpatterns = [
     url(r'^create_article/$',create_article,name = 'create_article'),
     url(r'^article/(?P<pk>[0-9]+)$',article), #文章详情页
     url(r'^delete_article/(?P<pk>[0-9]+)$',delete_article), #删除操作的url,后面是正则pk的写法
+    url(r'^edit_article/(?P<pk>[0-9]+)$',edit_article), #edit操作的url,后面是正则pk的写法
 ]

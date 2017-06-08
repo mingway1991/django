@@ -55,6 +55,9 @@
       </div>
  </nav>
 <div class="container theme-showcase" role="main">
+{% if report.log != "" %}
+<div class="alert alert-danger" role="alert">{{report.log}}</div>
+{% endif %}
 <div class="table-responsive">
 <table class="table table-strped">
 <thread>

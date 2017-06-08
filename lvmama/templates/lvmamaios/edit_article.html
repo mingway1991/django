@@ -57,17 +57,15 @@
  </nav>
 <!-- 内容 -->
 <div class="container theme-showcase" role="main">
-      <div class="btn-group" role="group" aria-label="...">
-      {% if can_change_article %}
-        <button type="button" class="btn btn-default"><a href="/lvmamaios/edit_article/{{ article.id }}">Edit</a></button>
-      {% endif %}
-      {% if can_delete_article %}
-        <button type="button" class="btn btn-default"><a href="/lvmamaios/delete_article/{{ article.id }}"><font color="#ff0000">Delete</font></a></button>
-      {% endif %}
-      </div>
-      <h3>{{article.article_title}}</h3>
-      <hr>
-      {{article.article_content}}
+      <form method = 'post' enctype="multipart/form-data">
+      {% csrf_token %}
+      <strong>Article Title：</strong><input type="text" class="form-control" name="atitle" value="{{article.article_title}}"/>
+      <br>
+      <div class="form-group"> 
+        <strong>Article Content：(支持Markdown语法)</strong><textarea class="form-control" rows="30" name="acontent">{{article.article_content}}</textarea> 
+      </div> 
+      <button type="submit" class="btn btn-default">Update</button>
+      </form>
 </div>
 <!-- Bootstrap core JavaScript
     ================================================== -->
