@@ -3,20 +3,27 @@
 
 import time
 from celery import task
-from utils.check_project import CheckProject
+from utils.publish_project import PublishProject
+from utils.publish_vendor_project import PublishVendorProject
+from utils.all_module_do_something import AllModuleDoSomething
 from models import Project
-from models import Report
+from models import ModuleVersion
 
 @task()
-def check(project_id, report_id):
-	project = Project.objects.get(pk=project_id)
-	report = Report.objects.get(pk=report_id)
-	checkProject = CheckProject(project,report)
-	checkProject.check()
-	
-    # print "++++++++++++++++++++++++++++++++++++"
-    # print('jobs[ts_id=%s] running....' % ts_id)
-    # time.sleep(10.0)
-    # print('jobs[ts_id=%s] done' % ts_id)
-    # result = True
-    # return result
+def task_publish_project(project_id, moduleversion_id,username):
+    project = Project.objects.get(pk=project_id)
+    version = ModuleVersion.objects.get(pk=moduleversion_id)
+    publishProject = PublishProject(project,version,username)
+    publishProject.publish()
+
+@task()
+def task_publish_vendor_project(project_id, moduleversion_id,username):
+    project = Project.objects.get(pk=project_id)
+    version = ModuleVersion.objects.get(pk=moduleversion_id)
+    publishVendorProject = PublishVendorProject(project,version,username)
+    publishVendorProject.publish()
+
+@task()
+def allModuleDoSomething(modules,branch,command):
+    allModuleDoSomething = AllModuleDoSomething(command,branch,modules)
+    allModuleDoSomething.do()

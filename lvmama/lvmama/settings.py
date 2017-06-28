@@ -15,15 +15,12 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 import os
 import djcelery
+import logging
+
 djcelery.setup_loader()
 
-# CELERY STUFF
-BROKER_URL = 'redis://localhost:6379'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379'
-CELERY_ACCEPT_CONTENT = ['application/json']
-CELERY_TASK_SERIALIZER = 'json'
-CELERY_RESULT_SERIALIZER = 'json'
-CELERY_TIMEZONE = 'Africa/Nairobi'
+BROKER_URL = 'redis://localhost:6379/0'
+BROKER_CONNECTION_MAX_RETRIES = 5
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -36,13 +33,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'qay)01us6*qa(ma+=6-d-@8bqb6u*6^c&^mwhrt8u2wpi6sw-s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['*']
 
-# DEBUG = True
+DEBUG = True
 
-# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -68,6 +65,10 @@ INSTALLED_APPS = [
     # 'wiki.plugins.images',
     # 'wiki.plugins.macros',
 ]
+
+TEMPLATE_LOADERS = (
+    'django.template.loaders.app_directories.load_template_source',
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -168,3 +169,55 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(os.path.dirname(__file__), '../static/').replace('\\','/'),]
 
 LOGIN_URL = '/signin/'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'formatters': {
+        'direct': {
+            'format': '%(asctime)s - %(message)s'
+        },
+        'json': {
+            'format': '%(message)s'
+        },
+    },
+    'handlers': {
+        'celery.worker': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': BASE_DIR+'/logs/celery.worker.log',
+            'formatter': 'direct'
+        },
+        'celery.task': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': BASE_DIR+'/logs/celery.task.log',
+            'formatter': 'direct'
+        },
+    },
+    'loggers': {
+        'celery.worker': {
+            'handlers': ['celery.worker'],
+            'level': 'DEBUG'
+        },
+        'celery.task': {
+            'handlers': ['celery.task'],
+            'level': 'DEBUG'
+        },
+    }
+}
+
+#celery settings
+#celery中间人 redis://redis服务所在的ip地址:端口/数据库
+BROKER_URL = 'redis://localhost:6379/0'
+REDIS_CONNECT_RETRY = True
+REDIS_TIMEOUT = 7 * 24 * 60 * 60
+CUBES_REDIS_TIMEOUT = 60 * 60
+NEVER_REDIS_TIMEOUT = 365 * 24 * 60 * 60
+
+CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+CELERY_TIMEZONE = TIME_ZONE
+CELERY_WORKER_PREFETCH_MULTIPLIER = 0
+CELERYD_CONCURRENCY = 50 # celery worker的并发数 也是命令行-c指定的数目,事实上实践发现并不是worker也多越好,保证任务不堆积,加上一定新增任务的预留就可以
+CELERYD_PREFETCH_MULTIPLIER = 4 # celery worker 每次去rabbitmq取任务的数量，我这里预取了4个慢慢执行,因为任务有长有短没有预取太多
+CELERYD_MAX_TASKS_PER_CHILD = 200 # 每个worker执行了多少任务就会死掉，我建议数量可以大一些，比如200

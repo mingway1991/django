@@ -9,19 +9,16 @@
     <meta name="author" content="">
     <link rel="icon" href="../../static/bootstrap/favicon.ico">
 
-    <title>Report</title>
+    <title>Article List</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../static/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../../static/bootstrap/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="../../static/css/dashboard.css" rel="stylesheet">
-    <link href="../../static/css/theme.css" rel="stylesheet">
-
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../static/bootstrap/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -47,55 +44,81 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-	    <li><a href="/lvmamaios/index">Dashboard</a></li>
-            <li><a href="#">{{username}}</a></li>
-	    <li><a href="/lvmamaios/signout/">Sign Out</a></li>
+              <li><a href="/lvmamaios/create_article/">Create Article</a></li>
+              <li><a href="#">{{username}}</a></li>
+	            <li><a href="/lvmamaios/signout/">Sign Out</a></li>
           </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
         </div>
       </div>
  </nav>
-<div class="container theme-showcase" role="main">
-{% if report.log != "" %}
-<div class="alert alert-danger" role="alert">{{report.log}}</div>
-{% endif %}
-<div class="table-responsive">
-<table class="table table-strped">
-<thread>
-<tr>
-<th>Check Step</th>
-<th>Check Step Description</th>
-<th>Status</th>
-<th>Duration</th>
-</tr>
-</thread>
-<tbody>
-	{% for checkStep in checkSteps %}
-{% if checkStep.step_status == "success" %}
-	<tr class="success">
-	<td>{{checkStep.step_title}}</td>
-	<td>{{checkStep.step_description}}</td>
-	<td>{{checkStep.step_status}}</td>
-	<td>{{checkStep.step_duration}} 秒</td>
-	</tr>
-{% elif checkStep.step_status == "fail" %}
-	<tr class="error">
-	<td>{{checkStep.step_title}}</td>
-	<td>{{checkStep.step_description}}</td>
-	<td>{{checkStep.step_status}}</td>
-	<td>{{checkStep.step_duration}} 秒</td>
-	</tr>
-{% else %}
-	<tr class="warning">
-	<td>{{checkStep.step_title}}</td>
-	<td>{{checkStep.step_description}}</td>
-	<td>{{checkStep.step_status}}</td>
-	<td>{{checkStep.step_duration}} 秒</td>
-	</tr>
-{% endif %}
-	{% endfor %}
-</tbody>
-</table>
+
+<div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="/lvmamaios/index">Overview<span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="#">Articles<span class="sr-only">(current)</span></a></li>
+            <li><a href="/lvmamaios/app_list">Apps<span class="sr-only">(current)</span></a></li>
+            <li><a href="/lvmamaios/all_module_do_something">All Modules<span class="sr-only">(current)</span></a></li>
+          </ul>
+        </div>
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Article List</h1>
+
+
+<table class="table" id="para_table">  
+    <tr>  
+        <th style="text-align:center" width="300">文章标题</th>  
+        <th style="text-align:center" width="50">文章作者</th>  
+        {% if can_delete_article %}
+        <th style="text-align:center" width="50">操作</th>
+        {% endif %}
+    </tr>
+    {% for article in articles %}
+    <tr>  
+      <td style="text-align:center; " onclick="tdclick(this)"><a href="/lvmamaios/article/{{ article.id }}">{{article.article_title}}</a></td>  
+      <td style="text-align:center; " onclick="tdclick(this)">{{article.author.username}}</td>
+      {% if can_delete_article %}
+      <td style="text-align:center; " onclick="deletetr(this)">  
+        <button type="button"  class="btn btn-xs btn-link"><a href="/lvmamaios/delete_article/{{ article.id }}">Delete</a></button>  
+      </td>
+      {% endif %}
+    </tr>
+    {% endfor %}
+</table> 
+<!-- 添加分页 -->
+{% if articles.paginator.num_pages > 1 %}
+<div class="container">
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    {% if articles.has_previous %}
+    <li>
+      <a href="?page={{ articles.previous_page_number }}" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    {% endif %}
+    {% for page in articles.paginator.page_range %}
+    {% if articles.number == page %}
+    <li><a href="#"><font color="#000000">{{page}}</font></a></li>
+    {% else %}
+    <li><a href="?page={{ page }}">{{page}}</a></li>
+    {% endif %}
+    {% endfor %}
+    {% if articles.has_next %}
+    <li>
+      <a href="?page={{ articles.next_page_number }}" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+    {% endif %}
+  </ul>
+</nav>
 </div>
+{% endif %}
 </div>
 <!-- Bootstrap core JavaScript
     ================================================== -->

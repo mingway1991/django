@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../static/bootstrap/favicon.ico">
+
+    <title>{{project.project_name}}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../static/bootstrap/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../static/css/dashboard.css" rel="stylesheet">
+    <link href="../../static/css/theme.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../static/bootstrap/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+<!-- 导航条 -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Lvmama iOS</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+	    <li><a href="/lvmamaios/index">Dashboard</a></li>
+            <li><a href="#">{{username}}</a></li>
+	    <li><a href="/lvmamaios/signout/">Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+ </nav>
+<!-- 内容 -->
+<div class="container theme-showcase" role="main">
+	<form method = 'post' enctype="multipart/form-data">
+	{% csrf_token %}
+  <strong>Project Name：</strong>
+  <input type='text' class="form-control" name='pname' value='{{project.project_name}}' readonly="true">
+	<br>
+	<strong>Project Url：</strong>
+  <input type='text' class="form-control" name='purl' value='{{project.project_url}}' readonly="true">
+	<br>
+	<strong>Develop Branch：</strong>
+  {% if can_change_project %}
+  <input type='text' class="form-control" name='pbranch' value='{{project.develop_branch}}'>
+  {% else %}
+  <input type='text' class="form-control" name='pbranch' value='{{project.develop_branch}}' readonly="true">
+  {% endif %}
+	<br>
+  {% if can_change_project %}
+	<button type="submit" class="btn btn-default">Update Project Information</button>
+  {% endif %}
+	</form>
+	<br>
+  {% for version in versions %}
+  <!-- Single button -->
+  <li>
+  <div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  {% if version.progress < 100 %}
+  <div class="progress">
+  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{version.progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{version.progress}}%">
+  </div>
+  </div>
+  {% endif %}
+  {% if version.is_success %}
+  <font color="43cd08"> {{version.version_name}} </font>
+  {% else %}
+  <font color="cd2626"> {{version.version_name}} </font>
+  {% endif %}
+  <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Check Version Info</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="/lvmamaios/console/{{version.id}}">Console</a></li>
+  </ul>
+</div>
+</li>
+<br>
+  {% endfor %}
+</div>
+<!-- 添加分页 -->
+{% if versions.paginator.num_pages > 1 %}
+<div class="container">
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    {% if versions.has_previous %}
+    <li>
+      <a href="?page={{ versions.previous_page_number }}" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    {% endif %}
+    {% for page in versions.paginator.page_range %}
+    {% if versions.number == page %}
+    <li><a href="#"><font color="#000000">{{page}}</font></a></li>
+    {% else %}
+    <li><a href="?page={{ page }}">{{page}}</a></li>
+    {% endif %}
+    {% endfor %}
+    {% if versions.has_next %}
+    <li>
+      <a href="?page={{ versions.next_page_number }}" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+    {% endif %}
+  </ul>
+</nav>
+</div>
+{% endif %}
+</div>
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../static/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../static/bootstrap/assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../static/bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

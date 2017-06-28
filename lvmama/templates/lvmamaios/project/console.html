@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../static/bootstrap/favicon.ico">
 
-    <title>{{project.project_name}}</title>
+    <title>Console</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
 
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="../../static/bootstrap/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../static/bootstrap/assets/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -34,7 +34,6 @@
     <![endif]-->
   </head>
 <body>
-<!-- 导航条 -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -55,78 +54,13 @@
         </div>
       </div>
  </nav>
-<!-- 内容 -->
 <div class="container theme-showcase" role="main">
-     <h3>
-	status:
-	<div class="{{status_label}}">
-	   <strong>{{project.project_status}}</strong>
-        </div>
-     </h3>
-	<br>
-	<form method = 'post' enctype="multipart/form-data">
-	{% csrf_token %}
-  <strong>Project Name：</strong>
-  {% if can_change_project %}
-	<input type='text' class="form-control" name='pname' value='{{project.project_name}}'>
-  {% else %}
-  <input type='text' class="form-control" name='pname' value='{{project.project_name}}' readonly="true">
-  {% endif %}
-	<br>
-	<strong>Project Url：</strong>
-  {% if can_change_project %}
-  <input type='text' class="form-control" name='purl' value='{{project.project_url}}'>
-  {% else %}
-  <input type='text' class="form-control" name='purl' value='{{project.project_url}}' readonly="true">
-  {% endif %}
-	<br>
-	<strong>Project Branch：</strong>
-  {% if can_change_project %}
-  <input type='text' class="form-control" name='pbranch' value='{{project.project_branch}}'>
-  {% else %}
-  <input type='text' class="form-control" name='pbranch' value='{{project.project_branch}}' readonly="true">
-  {% endif %}
-	<br>
-  {% if can_change_project %}
-	<button type="submit" class="btn btn-default">Update Project Information</button>
-  {% endif %}
-	</form>
-	<br>
-	<h3><a href="/lvmamaios/publish/{{project.id}}">Publish</a></h3>
-	{% for report in reports %}
-	<li><a href="/lvmamaios/report/{{ report.id }}">{{report.timestamp}}</a> <strong>status:</strong>{{report.report_status}} <strong>author:</strong>{{report.author.username}}</li>
-	{% endfor %}
+{% autoescape off %}
+
+{{console.console_message}}
+
+{% endautoescape %} 
 </div>
-<!-- 添加分页 -->
-{% if reports.paginator.num_pages > 1 %}
-<div class="container">
-<nav aria-label="Page navigation">
-  <ul class="pagination">
-    {% if reports.has_previous %}
-    <li>
-      <a href="?page={{ reports.previous_page_number }}" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    {% endif %}
-    {% for page in reports.paginator.page_range %}
-    {% if reports.number == page %}
-    <li><a href="#"><font color="#000000">{{page}}</font></a></li>
-    {% else %}
-    <li><a href="?page={{ page }}">{{page}}</a></li>
-    {% endif %}
-    {% endfor %}
-    {% if reports.has_next %}
-    <li>
-      <a href="?page={{ reports.next_page_number }}" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-    {% endif %}
-  </ul>
-</nav>
-</div>
-{% endif %}
 <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

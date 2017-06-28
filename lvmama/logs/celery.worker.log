@@ -1,0 +1,876 @@
+2017-06-14 17:53:36,917 - Connected to redis://localhost:6379/0
+2017-06-14 17:53:36,925 - mingle: searching for neighbors
+2017-06-14 17:53:37,932 - mingle: all alone
+2017-06-14 17:53:41,943 - Received task: lvmamaios.task.task_publish_project[35815499-7a84-4b39-9e01-2e9b0d463d19]
+2017-06-14 17:53:41,944 - Task accepted: lvmamaios.task.task_publish_project[35815499-7a84-4b39-9e01-2e9b0d463d19] pid:26774
+2017-06-14 17:54:02,407 - Task lvmamaios.task.task_publish_project[35815499-7a84-4b39-9e01-2e9b0d463d19] succeeded in 20.46433969s: None
+2017-06-14 17:56:38,877 - Received task: lvmamaios.task.task_publish_project[b94d7b30-f9d6-419d-99fe-36cfe2d15f48]
+2017-06-14 17:56:38,877 - Task accepted: lvmamaios.task.task_publish_project[b94d7b30-f9d6-419d-99fe-36cfe2d15f48] pid:26774
+2017-06-14 17:56:58,594 - Task lvmamaios.task.task_publish_project[b94d7b30-f9d6-419d-99fe-36cfe2d15f48] succeeded in 19.716837366s: None
+2017-06-14 17:57:20,388 - Received task: lvmamaios.task.task_publish_project[1b8c5599-febb-4dde-bdcb-9e96610e0998]
+2017-06-14 17:57:20,388 - Task accepted: lvmamaios.task.task_publish_project[1b8c5599-febb-4dde-bdcb-9e96610e0998] pid:26774
+2017-06-14 17:57:40,464 - Task lvmamaios.task.task_publish_project[1b8c5599-febb-4dde-bdcb-9e96610e0998] succeeded in 20.076273175s: None
+2017-06-14 17:58:15,892 - Received task: lvmamaios.task.task_publish_project[6c424c49-1918-4313-8ed8-27f869b41158]
+2017-06-14 17:58:15,892 - Task accepted: lvmamaios.task.task_publish_project[6c424c49-1918-4313-8ed8-27f869b41158] pid:26774
+2017-06-14 17:58:36,247 - Task lvmamaios.task.task_publish_project[6c424c49-1918-4313-8ed8-27f869b41158] succeeded in 20.354613537s: None
+2017-06-14 18:25:30,111 - Received task: lvmamaios.task.task_publish_project[2224cd0e-ae2d-4c43-9fa1-fd4c1297ae50]
+2017-06-14 18:25:30,113 - Task accepted: lvmamaios.task.task_publish_project[2224cd0e-ae2d-4c43-9fa1-fd4c1297ae50] pid:26774
+2017-06-14 18:25:50,659 - Task lvmamaios.task.task_publish_project[2224cd0e-ae2d-4c43-9fa1-fd4c1297ae50] succeeded in 20.548102138s: None
+2017-06-14 18:25:56,282 - Canceling task consumer...
+2017-06-14 18:25:56,282 - Canceling task consumer...
+2017-06-14 18:25:56,282 - Closing consumer channel...
+2017-06-15 15:24:36,651 - Connected to redis://localhost:6379/0
+2017-06-15 15:24:36,659 - mingle: searching for neighbors
+2017-06-15 15:24:37,664 - mingle: all alone
+2017-06-15 15:24:40,469 - Received task: lvmamaios.task.task_publish_project[fc2d0cc2-114f-4d2e-811d-ad5f2d2d0208]
+2017-06-15 15:24:40,470 - Task accepted: lvmamaios.task.task_publish_project[fc2d0cc2-114f-4d2e-811d-ad5f2d2d0208] pid:41222
+2017-06-15 15:25:01,932 - Task lvmamaios.task.task_publish_project[fc2d0cc2-114f-4d2e-811d-ad5f2d2d0208] succeeded in 21.462210733s: None
+2017-06-15 15:25:34,620 - Received task: lvmamaios.task.task_publish_project[2a087d01-b8b0-415f-b651-edf42a923d1b]
+2017-06-15 15:25:34,620 - Task accepted: lvmamaios.task.task_publish_project[2a087d01-b8b0-415f-b651-edf42a923d1b] pid:41222
+2017-06-15 15:25:54,955 - Task lvmamaios.task.task_publish_project[2a087d01-b8b0-415f-b651-edf42a923d1b] succeeded in 20.335297077s: None
+2017-06-15 15:40:13,056 - Received task: lvmamaios.task.task_publish_project[13d4ec1e-dc22-4927-9040-862e0c4a2596]
+2017-06-15 15:40:13,056 - Task accepted: lvmamaios.task.task_publish_project[13d4ec1e-dc22-4927-9040-862e0c4a2596] pid:41222
+2017-06-15 15:40:32,986 - Task lvmamaios.task.task_publish_project[13d4ec1e-dc22-4927-9040-862e0c4a2596] succeeded in 19.930102124s: None
+2017-06-15 15:40:55,652 - Canceling task consumer...
+2017-06-15 15:40:55,704 - Canceling task consumer...
+2017-06-15 15:40:55,704 - Closing consumer channel...
+2017-06-15 15:40:59,069 - Connected to redis://localhost:6379/0
+2017-06-15 15:40:59,078 - mingle: searching for neighbors
+2017-06-15 15:41:00,086 - mingle: all alone
+2017-06-15 15:41:04,066 - Received task: lvmamaios.task.task_publish_project[c0dcfd52-37c3-4155-a73f-bbdbc4c5aaf4]
+2017-06-15 15:41:04,067 - Task accepted: lvmamaios.task.task_publish_project[c0dcfd52-37c3-4155-a73f-bbdbc4c5aaf4] pid:42264
+2017-06-15 15:41:23,318 - Task lvmamaios.task.task_publish_project[c0dcfd52-37c3-4155-a73f-bbdbc4c5aaf4] succeeded in 19.251173704s: None
+2017-06-15 15:48:40,431 - Canceling task consumer...
+2017-06-15 15:48:40,431 - Canceling task consumer...
+2017-06-15 15:48:40,431 - Closing consumer channel...
+2017-06-15 15:48:45,664 - Connected to redis://localhost:6379/0
+2017-06-15 15:48:45,671 - mingle: searching for neighbors
+2017-06-15 15:48:46,678 - mingle: all alone
+2017-06-15 15:48:59,929 - Received task: lvmamaios.task.task_publish_project[f047fb65-5a36-4f04-9164-45780d25c4ca]
+2017-06-15 15:48:59,930 - Task accepted: lvmamaios.task.task_publish_project[f047fb65-5a36-4f04-9164-45780d25c4ca] pid:42708
+2017-06-15 15:48:59,955 - Task lvmamaios.task.task_publish_project[f047fb65-5a36-4f04-9164-45780d25c4ca] raised unexpected: NameError("global name 'log_worker' is not defined",)
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/task.py", line 15, in task_publish_project
+    publishProject.publish()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 40, in publish
+    self.generateVersion()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 47, in generateVersion
+    result = self.cloneProject()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 100, in cloneProject
+    thread = Thread(target=log_worker, args=[sub_process.stdout])
+NameError: global name 'log_worker' is not defined
+2017-06-15 15:50:06,333 - Canceling task consumer...
+2017-06-15 15:50:06,387 - Canceling task consumer...
+2017-06-15 15:50:06,387 - Closing consumer channel...
+2017-06-15 15:50:09,391 - Connected to redis://localhost:6379/0
+2017-06-15 15:50:09,399 - mingle: searching for neighbors
+2017-06-15 15:50:10,412 - mingle: all alone
+2017-06-15 15:50:12,952 - Received task: lvmamaios.task.task_publish_project[db7f5bbe-88e1-47c5-8f06-1577546dace7]
+2017-06-15 15:50:12,953 - Task accepted: lvmamaios.task.task_publish_project[db7f5bbe-88e1-47c5-8f06-1577546dace7] pid:42769
+2017-06-15 15:50:12,973 - Task lvmamaios.task.task_publish_project[db7f5bbe-88e1-47c5-8f06-1577546dace7] raised unexpected: NameError("global name 'sub_process' is not defined",)
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/task.py", line 15, in task_publish_project
+    publishProject.publish()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 40, in publish
+    self.generateVersion()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 47, in generateVersion
+    result = self.cloneProject()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 100, in cloneProject
+    thread = Thread(target=log_worker, args=[sub_process.stdout,consoleOutput])
+NameError: global name 'sub_process' is not defined
+2017-06-15 15:50:25,139 - Canceling task consumer...
+2017-06-15 15:50:25,192 - Canceling task consumer...
+2017-06-15 15:50:25,192 - Closing consumer channel...
+2017-06-15 15:50:27,750 - Connected to redis://localhost:6379/0
+2017-06-15 15:50:27,759 - mingle: searching for neighbors
+2017-06-15 15:50:28,768 - mingle: all alone
+2017-06-15 15:50:30,454 - Received task: lvmamaios.task.task_publish_project[16e48d41-f8ed-41ed-b0e9-4653bf9aff93]
+2017-06-15 15:50:30,454 - Task accepted: lvmamaios.task.task_publish_project[16e48d41-f8ed-41ed-b0e9-4653bf9aff93] pid:42800
+2017-06-15 15:50:30,476 - Task lvmamaios.task.task_publish_project[16e48d41-f8ed-41ed-b0e9-4653bf9aff93] raised unexpected: NameError("global name 'consoleOutput' is not defined",)
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/task.py", line 15, in task_publish_project
+    publishProject.publish()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 40, in publish
+    self.generateVersion()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 47, in generateVersion
+    result = self.cloneProject()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 100, in cloneProject
+    thread = Thread(target=log_worker, args=[p.stdout,consoleOutput])
+NameError: global name 'consoleOutput' is not defined
+2017-06-15 15:50:41,353 - Canceling task consumer...
+2017-06-15 15:50:41,354 - Canceling task consumer...
+2017-06-15 15:50:41,354 - Closing consumer channel...
+2017-06-15 15:50:43,839 - Connected to redis://localhost:6379/0
+2017-06-15 15:50:43,847 - mingle: searching for neighbors
+2017-06-15 15:50:44,855 - mingle: all alone
+2017-06-15 15:50:46,467 - Received task: lvmamaios.task.task_publish_project[a5ca4879-bd3a-40d1-b591-113106a61116]
+2017-06-15 15:50:46,467 - Task accepted: lvmamaios.task.task_publish_project[a5ca4879-bd3a-40d1-b591-113106a61116] pid:42838
+2017-06-15 15:51:06,803 - Task lvmamaios.task.task_publish_project[a5ca4879-bd3a-40d1-b591-113106a61116] succeeded in 20.335796917s: None
+2017-06-15 15:52:56,488 - Canceling task consumer...
+2017-06-15 15:52:56,548 - Canceling task consumer...
+2017-06-15 15:52:56,548 - Closing consumer channel...
+2017-06-15 15:53:00,058 - Connected to redis://localhost:6379/0
+2017-06-15 15:53:00,065 - mingle: searching for neighbors
+2017-06-15 15:53:01,073 - mingle: all alone
+2017-06-15 15:53:04,393 - Received task: lvmamaios.task.task_publish_project[226d9371-2360-401d-b815-1a58ef9e5e6a]
+2017-06-15 15:53:04,413 - Task accepted: lvmamaios.task.task_publish_project[226d9371-2360-401d-b815-1a58ef9e5e6a] pid:43146
+2017-06-15 15:53:05,941 - Task lvmamaios.task.task_publish_project[226d9371-2360-401d-b815-1a58ef9e5e6a] raised unexpected: IOError('close() called during concurrent operation on the same file object.',)
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/task.py", line 15, in task_publish_project
+    publishProject.publish()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 41, in publish
+    self.generateVersion()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 48, in generateVersion
+    result = self.cloneProject()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 106, in cloneProject
+    (stdoutput,erroutput) = p.communicate()
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 799, in communicate
+    return self._communicate(input)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 1411, in _communicate
+    stdout, stderr = self._communicate_with_select(input)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 1537, in _communicate_with_select
+    self.stdout.close()
+IOError: close() called during concurrent operation on the same file object.
+2017-06-15 15:54:28,141 - Canceling task consumer...
+2017-06-15 15:54:28,193 - Canceling task consumer...
+2017-06-15 15:54:28,193 - Closing consumer channel...
+2017-06-15 15:54:32,099 - Connected to redis://localhost:6379/0
+2017-06-15 15:54:32,107 - mingle: searching for neighbors
+2017-06-15 15:54:33,115 - mingle: all alone
+2017-06-15 15:54:36,657 - Received task: lvmamaios.task.task_publish_project[91543063-6563-4ef7-96a3-3d5900ad1304]
+2017-06-15 15:54:36,658 - Task accepted: lvmamaios.task.task_publish_project[91543063-6563-4ef7-96a3-3d5900ad1304] pid:43214
+2017-06-15 15:54:57,927 - Task lvmamaios.task.task_publish_project[91543063-6563-4ef7-96a3-3d5900ad1304] succeeded in 21.270018266s: None
+2017-06-15 15:56:05,252 - Canceling task consumer...
+2017-06-15 15:56:05,252 - Canceling task consumer...
+2017-06-15 15:56:05,252 - Closing consumer channel...
+2017-06-15 15:56:11,618 - Connected to redis://localhost:6379/0
+2017-06-15 15:56:11,625 - mingle: searching for neighbors
+2017-06-15 15:56:12,633 - mingle: all alone
+2017-06-15 15:56:16,150 - Received task: lvmamaios.task.task_publish_project[18a47036-7b0a-4748-9d54-3475d1df36b8]
+2017-06-15 15:56:16,151 - Task accepted: lvmamaios.task.task_publish_project[18a47036-7b0a-4748-9d54-3475d1df36b8] pid:43533
+2017-06-15 15:56:16,171 - Task lvmamaios.task.task_publish_project[18a47036-7b0a-4748-9d54-3475d1df36b8] raised unexpected: OSError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/task.py", line 15, in task_publish_project
+    publishProject.publish()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 41, in publish
+    self.generateVersion()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 48, in generateVersion
+    result = self.cloneProject()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 99, in cloneProject
+    p = subprocess.Popen([command],stdin=sys.stdin,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 710, in __init__
+    errread, errwrite)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 1335, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory
+2017-06-15 15:56:42,231 - Canceling task consumer...
+2017-06-15 15:56:42,231 - Canceling task consumer...
+2017-06-15 15:56:42,231 - Closing consumer channel...
+2017-06-15 15:56:44,212 - Connected to redis://localhost:6379/0
+2017-06-15 15:56:44,220 - mingle: searching for neighbors
+2017-06-15 15:56:45,224 - mingle: all alone
+2017-06-15 15:56:47,515 - Received task: lvmamaios.task.task_publish_project[928b743f-198b-4ccd-a610-65f4e60bd962]
+2017-06-15 15:56:47,516 - Task accepted: lvmamaios.task.task_publish_project[928b743f-198b-4ccd-a610-65f4e60bd962] pid:43567
+2017-06-15 15:56:47,537 - Task lvmamaios.task.task_publish_project[928b743f-198b-4ccd-a610-65f4e60bd962] raised unexpected: OSError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/task.py", line 15, in task_publish_project
+    publishProject.publish()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 41, in publish
+    self.generateVersion()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 48, in generateVersion
+    result = self.cloneProject()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 99, in cloneProject
+    p = subprocess.Popen(command,stdin=sys.stdin,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 710, in __init__
+    errread, errwrite)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 1335, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory
+2017-06-15 15:57:01,851 - Canceling task consumer...
+2017-06-15 15:57:01,914 - Canceling task consumer...
+2017-06-15 15:57:01,914 - Closing consumer channel...
+2017-06-15 15:57:04,558 - Connected to redis://localhost:6379/0
+2017-06-15 15:57:04,567 - mingle: searching for neighbors
+2017-06-15 15:57:05,575 - mingle: all alone
+2017-06-15 15:57:07,650 - Received task: lvmamaios.task.task_publish_project[66844584-4df0-42d1-817a-77ee31af25c6]
+2017-06-15 15:57:07,652 - Task accepted: lvmamaios.task.task_publish_project[66844584-4df0-42d1-817a-77ee31af25c6] pid:43594
+2017-06-15 15:57:28,865 - Task lvmamaios.task.task_publish_project[66844584-4df0-42d1-817a-77ee31af25c6] succeeded in 21.214226188s: None
+2017-06-15 16:01:23,368 - Canceling task consumer...
+2017-06-15 16:01:23,368 - Canceling task consumer...
+2017-06-15 16:01:23,369 - Closing consumer channel...
+2017-06-15 16:02:03,471 - Connected to redis://localhost:6379/0
+2017-06-15 16:02:03,480 - mingle: searching for neighbors
+2017-06-15 16:02:04,487 - mingle: all alone
+2017-06-15 16:02:11,742 - Received task: lvmamaios.task.task_publish_project[59bf384b-5627-49d8-9f9b-83e70bdbafaf]
+2017-06-15 16:02:11,754 - Task accepted: lvmamaios.task.task_publish_project[59bf384b-5627-49d8-9f9b-83e70bdbafaf] pid:44026
+2017-06-15 16:02:12,236 - Task lvmamaios.task.task_publish_project[59bf384b-5627-49d8-9f9b-83e70bdbafaf] raised unexpected: NameError("global name 'proc' is not defined",)
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/task.py", line 15, in task_publish_project
+    publishProject.publish()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 41, in publish
+    self.generateVersion()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 48, in generateVersion
+    result = self.cloneProject()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 102, in cloneProject
+    line = proc.stdout.readline()
+NameError: global name 'proc' is not defined
+2017-06-15 16:02:32,547 - Canceling task consumer...
+2017-06-15 16:02:32,548 - Canceling task consumer...
+2017-06-15 16:02:32,548 - Closing consumer channel...
+2017-06-15 16:02:34,797 - Connected to redis://localhost:6379/0
+2017-06-15 16:02:34,810 - mingle: searching for neighbors
+2017-06-15 16:02:35,815 - mingle: all alone
+2017-06-15 16:02:38,722 - Received task: lvmamaios.task.task_publish_project[9a07f29d-0d7a-4546-a6cf-ae0c1d135743]
+2017-06-15 16:02:38,722 - Task accepted: lvmamaios.task.task_publish_project[9a07f29d-0d7a-4546-a6cf-ae0c1d135743] pid:44074
+2017-06-15 16:02:58,095 - Task lvmamaios.task.task_publish_project[9a07f29d-0d7a-4546-a6cf-ae0c1d135743] succeeded in 19.373043376s: None
+2017-06-15 16:04:19,589 - Canceling task consumer...
+2017-06-15 16:04:19,645 - Canceling task consumer...
+2017-06-15 16:04:19,645 - Closing consumer channel...
+2017-06-15 16:04:22,081 - Connected to redis://localhost:6379/0
+2017-06-15 16:04:22,089 - mingle: searching for neighbors
+2017-06-15 16:04:23,093 - mingle: all alone
+2017-06-15 16:04:28,029 - Received task: lvmamaios.task.task_publish_project[1b392891-5a60-416e-bf02-2161460e3c72]
+2017-06-15 16:04:28,030 - Task accepted: lvmamaios.task.task_publish_project[1b392891-5a60-416e-bf02-2161460e3c72] pid:44384
+2017-06-15 16:04:48,126 - Task lvmamaios.task.task_publish_project[1b392891-5a60-416e-bf02-2161460e3c72] succeeded in 20.097144931s: None
+2017-06-15 16:06:08,981 - Canceling task consumer...
+2017-06-15 16:06:09,043 - Canceling task consumer...
+2017-06-15 16:06:09,043 - Closing consumer channel...
+2017-06-15 16:06:11,574 - Connected to redis://localhost:6379/0
+2017-06-15 16:06:11,583 - mingle: searching for neighbors
+2017-06-15 16:06:12,587 - mingle: all alone
+2017-06-15 16:06:17,210 - Received task: lvmamaios.task.task_publish_project[c970fcd4-6bbf-4bf1-9a3e-7cb8ebd1753d]
+2017-06-15 16:06:17,211 - Task accepted: lvmamaios.task.task_publish_project[c970fcd4-6bbf-4bf1-9a3e-7cb8ebd1753d] pid:44688
+2017-06-15 16:06:36,844 - Task lvmamaios.task.task_publish_project[c970fcd4-6bbf-4bf1-9a3e-7cb8ebd1753d] succeeded in 19.633325453s: None
+2017-06-15 16:07:00,013 - Canceling task consumer...
+2017-06-15 16:07:00,014 - Canceling task consumer...
+2017-06-15 16:07:00,014 - Closing consumer channel...
+2017-06-15 16:07:03,557 - Connected to redis://localhost:6379/0
+2017-06-15 16:07:03,566 - mingle: searching for neighbors
+2017-06-15 16:07:04,573 - mingle: all alone
+2017-06-15 16:07:10,289 - Received task: lvmamaios.task.task_publish_project[abfe0f77-252e-4fd9-9722-6a5386d93355]
+2017-06-15 16:07:10,290 - Task accepted: lvmamaios.task.task_publish_project[abfe0f77-252e-4fd9-9722-6a5386d93355] pid:44963
+2017-06-15 16:07:29,803 - Task lvmamaios.task.task_publish_project[abfe0f77-252e-4fd9-9722-6a5386d93355] succeeded in 19.514048354s: None
+2017-06-15 16:09:02,299 - Canceling task consumer...
+2017-06-15 16:09:02,300 - Canceling task consumer...
+2017-06-15 16:09:02,300 - Closing consumer channel...
+2017-06-15 16:09:04,990 - Connected to redis://localhost:6379/0
+2017-06-15 16:09:04,998 - mingle: searching for neighbors
+2017-06-15 16:09:06,005 - mingle: all alone
+2017-06-15 16:09:09,507 - Received task: lvmamaios.task.task_publish_project[d0412738-4e5e-4d57-a90d-e8c78d8ae3b5]
+2017-06-15 16:09:09,535 - Task accepted: lvmamaios.task.task_publish_project[d0412738-4e5e-4d57-a90d-e8c78d8ae3b5] pid:45265
+2017-06-15 16:09:28,964 - Task lvmamaios.task.task_publish_project[d0412738-4e5e-4d57-a90d-e8c78d8ae3b5] succeeded in 19.456342851s: None
+2017-06-15 16:09:35,304 - Received task: lvmamaios.task.task_publish_project[0c09dd18-5f21-46fd-bd4f-5ba80a91d09f]
+2017-06-15 16:09:35,305 - Task accepted: lvmamaios.task.task_publish_project[0c09dd18-5f21-46fd-bd4f-5ba80a91d09f] pid:45265
+2017-06-15 16:09:55,158 - Task lvmamaios.task.task_publish_project[0c09dd18-5f21-46fd-bd4f-5ba80a91d09f] succeeded in 19.853558007s: None
+2017-06-15 16:20:39,958 - Canceling task consumer...
+2017-06-15 16:20:39,959 - Canceling task consumer...
+2017-06-15 16:20:39,959 - Closing consumer channel...
+2017-06-15 16:20:44,378 - Connected to redis://localhost:6379/0
+2017-06-15 16:20:44,387 - mingle: searching for neighbors
+2017-06-15 16:20:45,394 - mingle: all alone
+2017-06-15 16:20:49,275 - Received task: lvmamaios.task.task_publish_project[c163d17a-3c35-4e8e-b142-04c472279005]
+2017-06-15 16:20:49,276 - Task accepted: lvmamaios.task.task_publish_project[c163d17a-3c35-4e8e-b142-04c472279005] pid:46159
+2017-06-15 16:20:50,653 - Task lvmamaios.task.task_publish_project[c163d17a-3c35-4e8e-b142-04c472279005] raised unexpected: OSError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/task.py", line 15, in task_publish_project
+    publishProject.publish()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 42, in publish
+    self.generateVersion()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 62, in generateVersion
+    result = self.archive()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 141, in archive
+    proc = subprocess.Popen(command, stdout=tempf)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 710, in __init__
+    errread, errwrite)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 1335, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory
+2017-06-15 16:23:10,287 - Canceling task consumer...
+2017-06-15 16:23:10,361 - Canceling task consumer...
+2017-06-15 16:23:10,361 - Closing consumer channel...
+2017-06-15 16:23:12,186 - Connected to redis://localhost:6379/0
+2017-06-15 16:23:12,195 - mingle: searching for neighbors
+2017-06-15 16:23:13,201 - mingle: all alone
+2017-06-15 16:23:17,233 - Received task: lvmamaios.task.task_publish_project[e0c8e223-b12f-4716-bff0-af7803bbaf67]
+2017-06-15 16:23:17,234 - Task accepted: lvmamaios.task.task_publish_project[e0c8e223-b12f-4716-bff0-af7803bbaf67] pid:46250
+2017-06-15 16:23:18,583 - Task lvmamaios.task.task_publish_project[e0c8e223-b12f-4716-bff0-af7803bbaf67] raised unexpected: OSError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/task.py", line 15, in task_publish_project
+    publishProject.publish()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 42, in publish
+    self.generateVersion()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 62, in generateVersion
+    result = self.archive()
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/utils/publish_project.py", line 141, in archive
+    proc = subprocess.Popen([command], stdout=tempf)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 710, in __init__
+    errread, errwrite)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 1335, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory
+2017-06-15 16:24:19,996 - Canceling task consumer...
+2017-06-15 16:24:20,066 - Canceling task consumer...
+2017-06-15 16:24:20,066 - Closing consumer channel...
+2017-06-15 16:24:23,012 - Connected to redis://localhost:6379/0
+2017-06-15 16:24:23,019 - mingle: searching for neighbors
+2017-06-15 16:24:24,023 - mingle: all alone
+2017-06-15 16:24:32,019 - Received task: lvmamaios.task.task_publish_project[9586b500-7710-400f-bc6b-1410308aca79]
+2017-06-15 16:24:32,020 - Task accepted: lvmamaios.task.task_publish_project[9586b500-7710-400f-bc6b-1410308aca79] pid:46314
+2017-06-15 16:24:51,647 - Task lvmamaios.task.task_publish_project[9586b500-7710-400f-bc6b-1410308aca79] succeeded in 19.627951607s: None
+2017-06-15 16:25:05,952 - Received task: lvmamaios.task.task_publish_project[57397a41-e9e6-4beb-b236-ea01c6965f55]
+2017-06-15 16:25:05,954 - Task accepted: lvmamaios.task.task_publish_project[57397a41-e9e6-4beb-b236-ea01c6965f55] pid:46314
+2017-06-15 16:29:23,549 - Canceling task consumer...
+2017-06-15 16:29:23,611 - Canceling task consumer...
+2017-06-15 16:29:23,611 - Closing consumer channel...
+2017-06-15 16:29:27,805 - Connected to redis://localhost:6379/0
+2017-06-15 16:29:27,842 - mingle: searching for neighbors
+2017-06-15 16:29:28,866 - mingle: all alone
+2017-06-15 16:29:34,606 - Received task: lvmamaios.task.task_publish_project[bb9e7b20-61c3-48c4-9be3-da59d4f77292]
+2017-06-15 16:29:34,607 - Task accepted: lvmamaios.task.task_publish_project[bb9e7b20-61c3-48c4-9be3-da59d4f77292] pid:50515
+2017-06-15 16:30:08,242 - Task lvmamaios.task.task_publish_project[bb9e7b20-61c3-48c4-9be3-da59d4f77292] succeeded in 33.635229462s: None
+2017-06-15 17:45:51,151 - Connected to redis://localhost:6379/0
+2017-06-15 17:45:51,159 - mingle: searching for neighbors
+2017-06-15 17:45:52,165 - mingle: all alone
+2017-06-15 18:00:20,685 - Received task: lvmamaios.task.task_publish_project[6c95fe9f-f57e-41a9-9368-93fe0aba37d7]
+2017-06-15 18:00:20,686 - Task accepted: lvmamaios.task.task_publish_project[6c95fe9f-f57e-41a9-9368-93fe0aba37d7] pid:1985
+2017-06-15 18:00:43,959 - Task lvmamaios.task.task_publish_project[6c95fe9f-f57e-41a9-9368-93fe0aba37d7] succeeded in 23.273854285s: None
+2017-06-15 18:06:48,405 - Canceling task consumer...
+2017-06-15 18:06:48,405 - Canceling task consumer...
+2017-06-15 18:06:48,406 - Closing consumer channel...
+2017-06-15 18:06:51,598 - Connected to redis://localhost:6379/0
+2017-06-15 18:06:51,606 - mingle: searching for neighbors
+2017-06-15 18:06:52,614 - mingle: all alone
+2017-06-15 18:06:55,834 - Received task: lvmamaios.task.task_publish_project[5c81212b-f42c-4ca2-98ff-8939021c857d]
+2017-06-15 18:06:55,835 - Task accepted: lvmamaios.task.task_publish_project[5c81212b-f42c-4ca2-98ff-8939021c857d] pid:2775
+2017-06-15 18:07:15,607 - Task lvmamaios.task.task_publish_project[5c81212b-f42c-4ca2-98ff-8939021c857d] succeeded in 19.772867314s: None
+2017-06-15 18:11:00,423 - Received task: lvmamaios.task.task_publish_project[846beff9-74d1-4318-a280-130f74a689cb]
+2017-06-15 18:11:00,424 - Task accepted: lvmamaios.task.task_publish_project[846beff9-74d1-4318-a280-130f74a689cb] pid:2775
+2017-06-15 18:11:19,815 - Task lvmamaios.task.task_publish_project[846beff9-74d1-4318-a280-130f74a689cb] succeeded in 19.391536221s: None
+2017-06-15 18:24:44,474 - Canceling task consumer...
+2017-06-15 18:24:44,476 - Canceling task consumer...
+2017-06-15 18:24:44,476 - Closing consumer channel...
+2017-06-15 18:24:47,462 - Connected to redis://localhost:6379/0
+2017-06-15 18:24:47,470 - mingle: searching for neighbors
+2017-06-15 18:24:48,476 - mingle: all alone
+2017-06-15 18:24:54,465 - Received task: lvmamaios.task.task_publish_project[59eb6c0d-9895-42ed-bb98-1c34d3e9c323]
+2017-06-15 18:24:54,465 - Task accepted: lvmamaios.task.task_publish_project[59eb6c0d-9895-42ed-bb98-1c34d3e9c323] pid:3947
+2017-06-15 18:25:14,604 - Task lvmamaios.task.task_publish_project[59eb6c0d-9895-42ed-bb98-1c34d3e9c323] succeeded in 20.138697842s: None
+2017-06-15 18:26:12,608 - Received task: lvmamaios.task.task_publish_project[68392338-3b03-491b-b08d-9f2757335ab5]
+2017-06-15 18:26:12,609 - Task accepted: lvmamaios.task.task_publish_project[68392338-3b03-491b-b08d-9f2757335ab5] pid:3947
+2017-06-15 18:26:37,169 - Task lvmamaios.task.task_publish_project[68392338-3b03-491b-b08d-9f2757335ab5] succeeded in 24.560650556s: None
+2017-06-15 18:27:44,658 - Received task: lvmamaios.task.task_publish_project[02a336e8-2e94-4bee-b910-8ec6d5f09010]
+2017-06-15 18:27:44,659 - Task accepted: lvmamaios.task.task_publish_project[02a336e8-2e94-4bee-b910-8ec6d5f09010] pid:3947
+2017-06-15 18:28:08,473 - Task lvmamaios.task.task_publish_project[02a336e8-2e94-4bee-b910-8ec6d5f09010] succeeded in 23.814978682s: None
+2017-06-15 18:32:16,739 - Received task: lvmamaios.task.task_publish_project[293ad843-7f2f-4665-9ce0-36f29bf106f0]
+2017-06-15 18:32:16,740 - Task accepted: lvmamaios.task.task_publish_project[293ad843-7f2f-4665-9ce0-36f29bf106f0] pid:3947
+2017-06-15 18:32:41,251 - Task lvmamaios.task.task_publish_project[293ad843-7f2f-4665-9ce0-36f29bf106f0] succeeded in 24.51160848s: None
+2017-06-15 18:33:57,645 - Received task: lvmamaios.task.task_publish_project[b6e3f0b2-ea20-430e-b036-48e243947b4b]
+2017-06-15 18:33:57,646 - Task accepted: lvmamaios.task.task_publish_project[b6e3f0b2-ea20-430e-b036-48e243947b4b] pid:3947
+2017-06-15 18:41:19,202 - Task lvmamaios.task.task_publish_project[b6e3f0b2-ea20-430e-b036-48e243947b4b] succeeded in 441.560156258s: None
+2017-06-15 18:44:10,417 - Received task: lvmamaios.task.task_publish_project[8b44f0c7-f823-4337-9bda-92a549e6bbba]
+2017-06-15 18:44:10,419 - Task accepted: lvmamaios.task.task_publish_project[8b44f0c7-f823-4337-9bda-92a549e6bbba] pid:3947
+2017-06-15 18:51:34,001 - Task lvmamaios.task.task_publish_project[8b44f0c7-f823-4337-9bda-92a549e6bbba] succeeded in 443.586610204s: None
+2017-06-15 20:27:18,313 - Received task: lvmamaios.task.task_publish_project[d155a8e1-42e7-4008-b23b-0214b0a44826]
+2017-06-15 20:27:18,314 - Task accepted: lvmamaios.task.task_publish_project[d155a8e1-42e7-4008-b23b-0214b0a44826] pid:3947
+2017-06-15 20:34:26,513 - Task lvmamaios.task.task_publish_project[d155a8e1-42e7-4008-b23b-0214b0a44826] succeeded in 428.203734198s: None
+2017-06-16 09:03:29,889 - consumer: Cannot connect to redis://localhost:6379/0: .
+Trying again in 2.00 seconds...
+
+2017-06-16 09:03:31,900 - consumer: Cannot connect to redis://localhost:6379/0: .
+Trying again in 4.00 seconds...
+
+2017-06-16 09:03:35,920 - Connected to redis://localhost:6379/0
+2017-06-16 09:03:35,928 - mingle: searching for neighbors
+2017-06-16 09:03:36,932 - mingle: all alone
+2017-06-16 09:04:58,614 - Received task: lvmamaios.task.task_publish_project[a7055498-f4ed-494c-b783-fc722b43fb3d]
+2017-06-16 09:04:58,614 - Task accepted: lvmamaios.task.task_publish_project[a7055498-f4ed-494c-b783-fc722b43fb3d] pid:1049
+2017-06-16 09:12:11,384 - Task lvmamaios.task.task_publish_project[a7055498-f4ed-494c-b783-fc722b43fb3d] succeeded in 432.770058408s: None
+2017-06-16 09:57:22,480 - Received task: lvmamaios.task.task_publish_project[a18855a1-bbe1-4bc6-822e-07b06ca0e981]
+2017-06-16 09:57:22,481 - Task accepted: lvmamaios.task.task_publish_project[a18855a1-bbe1-4bc6-822e-07b06ca0e981] pid:1049
+2017-06-16 10:08:16,498 - Task lvmamaios.task.task_publish_project[a18855a1-bbe1-4bc6-822e-07b06ca0e981] succeeded in 654.017620324s: None
+2017-06-16 13:35:34,002 - Received task: lvmamaios.task.task_publish_project[7f3d52f0-b311-4f93-8900-2339300d79cf]
+2017-06-16 13:35:34,002 - Task accepted: lvmamaios.task.task_publish_project[7f3d52f0-b311-4f93-8900-2339300d79cf] pid:1049
+2017-06-16 13:35:34,012 - Task lvmamaios.task.task_publish_project[7f3d52f0-b311-4f93-8900-2339300d79cf] raised unexpected: OperationalError('no such table: lvmamaios_version',)
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/task.py", line 13, in task_publish_project
+    version = ModuleVersion.objects.get(pk=version_id)
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 379, in get
+    num = len(clone)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 238, in __len__
+    self._fetch_all()
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 1087, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/compiler.py", line 835, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Library/Python/2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: lvmamaios_version
+2017-06-16 13:39:31,120 - Received task: lvmamaios.task.task_publish_project[a1e4a49d-1a88-4033-9745-b7a13ea26813]
+2017-06-16 13:39:31,128 - Task accepted: lvmamaios.task.task_publish_project[a1e4a49d-1a88-4033-9745-b7a13ea26813] pid:1049
+2017-06-16 13:39:31,133 - Task lvmamaios.task.task_publish_project[a1e4a49d-1a88-4033-9745-b7a13ea26813] raised unexpected: OperationalError('no such table: lvmamaios_version',)
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/Users/shimingwei/Desktop/gitLvmama/django/lvmama/lvmamaios/task.py", line 13, in task_publish_project
+    version = ModuleVersion.objects.get(pk=moduleversion_id)
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 379, in get
+    num = len(clone)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 238, in __len__
+    self._fetch_all()
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 1087, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/compiler.py", line 835, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Library/Python/2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: lvmamaios_version
+2017-06-16 13:39:58,125 - Canceling task consumer...
+2017-06-16 13:39:58,126 - Canceling task consumer...
+2017-06-16 13:39:58,126 - Closing consumer channel...
+2017-06-16 13:40:00,813 - Connected to redis://localhost:6379/0
+2017-06-16 13:40:00,821 - mingle: searching for neighbors
+2017-06-16 13:40:01,829 - mingle: all alone
+2017-06-16 13:40:10,880 - Received task: lvmamaios.task.task_publish_project[5450e44f-7ab0-4180-b474-95993f41c4da]
+2017-06-16 13:40:10,893 - Task accepted: lvmamaios.task.task_publish_project[5450e44f-7ab0-4180-b474-95993f41c4da] pid:64901
+2017-06-16 13:47:46,773 - Task lvmamaios.task.task_publish_project[5450e44f-7ab0-4180-b474-95993f41c4da] succeeded in 455.892721912s: None
+2017-06-16 17:33:17,495 - Received task: lvmamaios.task.task_publish_project[88e062f6-c724-4a2c-a3e1-fd6a042cd6d1]
+2017-06-16 17:33:17,515 - Task accepted: lvmamaios.task.task_publish_project[88e062f6-c724-4a2c-a3e1-fd6a042cd6d1] pid:64901
+2017-06-16 17:42:02,525 - Task lvmamaios.task.task_publish_project[88e062f6-c724-4a2c-a3e1-fd6a042cd6d1] succeeded in 525.029220288s: None
+2017-06-20 13:35:22,419 - consumer: Cannot connect to redis://localhost:6379/0: .
+Trying again in 2.00 seconds...
+
+2017-06-20 13:35:24,429 - consumer: Cannot connect to redis://localhost:6379/0: .
+Trying again in 4.00 seconds...
+
+2017-06-20 13:35:28,440 - consumer: Cannot connect to redis://localhost:6379/0: .
+Trying again in 6.00 seconds...
+
+2017-06-20 13:35:34,463 - consumer: Cannot connect to redis://localhost:6379/0: .
+Trying again in 8.00 seconds...
+
+2017-06-20 13:35:42,489 - Connected to redis://localhost:6379/0
+2017-06-20 13:35:42,497 - mingle: searching for neighbors
+2017-06-20 13:35:43,505 - mingle: all alone
+2017-06-20 16:23:25,554 - Connected to redis://localhost:6379/0
+2017-06-20 16:23:25,564 - mingle: searching for neighbors
+2017-06-20 16:23:26,572 - mingle: all alone
+2017-06-20 19:14:41,345 - Connected to redis://localhost:6379/0
+2017-06-20 19:14:41,353 - mingle: searching for neighbors
+2017-06-20 19:14:42,361 - mingle: all alone
+2017-06-20 19:15:04,743 - Received task: lvmamaios.task.task_publish_project[49cb0117-78d7-42fc-be7b-f28496480ed2]
+2017-06-20 19:15:04,759 - Task accepted: lvmamaios.task.task_publish_project[49cb0117-78d7-42fc-be7b-f28496480ed2] pid:70628
+2017-06-20 19:23:04,895 - Task lvmamaios.task.task_publish_project[49cb0117-78d7-42fc-be7b-f28496480ed2] succeeded in 480.150797363s: None
+2017-06-20 19:23:04,897 - Received task: lvmamaios.task.task_publish_project[4cd84711-46ff-448d-8146-34ff6d01c03e]
+2017-06-20 19:23:04,897 - Task accepted: lvmamaios.task.task_publish_project[4cd84711-46ff-448d-8146-34ff6d01c03e] pid:70628
+2017-06-20 19:30:17,544 - Task lvmamaios.task.task_publish_project[4cd84711-46ff-448d-8146-34ff6d01c03e] succeeded in 432.647310903s: None
+2017-06-20 19:30:43,458 - Received task: lvmamaios.task.task_publish_project[d406eb4a-2e66-41b2-9dd8-da9de93db629]
+2017-06-20 19:30:43,459 - Task accepted: lvmamaios.task.task_publish_project[d406eb4a-2e66-41b2-9dd8-da9de93db629] pid:70628
+2017-06-20 19:37:39,002 - Task lvmamaios.task.task_publish_project[d406eb4a-2e66-41b2-9dd8-da9de93db629] succeeded in 415.543221801s: None
+2017-06-20 19:37:44,439 - Canceling task consumer...
+2017-06-20 19:37:44,439 - Canceling task consumer...
+2017-06-20 19:37:44,439 - Closing consumer channel...
+2017-06-20 19:37:47,931 - Connected to redis://localhost:6379/0
+2017-06-20 19:37:47,939 - mingle: searching for neighbors
+2017-06-20 19:37:48,947 - mingle: all alone
+2017-06-20 19:37:54,241 - Received task: lvmamaios.task.task_publish_project[66bffb09-9937-45a1-b7a0-740b6bb37deb]
+2017-06-20 19:37:54,241 - Task accepted: lvmamaios.task.task_publish_project[66bffb09-9937-45a1-b7a0-740b6bb37deb] pid:98780
+2017-06-20 19:38:12,012 - Task lvmamaios.task.task_publish_project[66bffb09-9937-45a1-b7a0-740b6bb37deb] succeeded in 17.770562942s: None
+2017-06-20 19:38:25,882 - Received task: lvmamaios.task.task_publish_project[95cbdaef-967c-4137-bcad-3b2a1508db4b]
+2017-06-20 19:38:25,884 - Task accepted: lvmamaios.task.task_publish_project[95cbdaef-967c-4137-bcad-3b2a1508db4b] pid:98780
+2017-06-20 19:43:52,921 - Task lvmamaios.task.task_publish_project[95cbdaef-967c-4137-bcad-3b2a1508db4b] succeeded in 327.037757418s: None
+2017-06-20 19:43:58,404 - Received task: lvmamaios.task.task_publish_project[ffac04dc-6c0d-4e13-92f1-8e1a03b5bfeb]
+2017-06-20 19:43:58,404 - Task accepted: lvmamaios.task.task_publish_project[ffac04dc-6c0d-4e13-92f1-8e1a03b5bfeb] pid:98780
+2017-06-20 19:49:00,469 - Task lvmamaios.task.task_publish_project[ffac04dc-6c0d-4e13-92f1-8e1a03b5bfeb] succeeded in 302.064769959s: None
+2017-06-20 19:49:42,590 - Canceling task consumer...
+2017-06-20 19:49:42,591 - Canceling task consumer...
+2017-06-20 19:49:42,591 - Closing consumer channel...
+2017-06-20 19:49:50,266 - Connected to redis://localhost:6379/0
+2017-06-20 19:49:50,274 - mingle: searching for neighbors
+2017-06-20 19:49:51,282 - mingle: all alone
+2017-06-20 19:49:57,983 - Received task: lvmamaios.task.task_publish_project[9f6c6847-17cf-4112-b723-ca965c83490e]
+2017-06-20 19:49:58,002 - Task accepted: lvmamaios.task.task_publish_project[9f6c6847-17cf-4112-b723-ca965c83490e] pid:14942
+2017-06-20 19:56:23,436 - Task lvmamaios.task.task_publish_project[9f6c6847-17cf-4112-b723-ca965c83490e] succeeded in 385.45251451s: None
+2017-06-20 19:56:23,438 - Received task: lvmamaios.task.task_publish_project[94af615f-3ef6-4e14-929d-4fa916ad7ebf]
+2017-06-20 19:56:23,439 - Task accepted: lvmamaios.task.task_publish_project[94af615f-3ef6-4e14-929d-4fa916ad7ebf] pid:14942
+2017-06-20 19:56:46,659 - Task lvmamaios.task.task_publish_project[94af615f-3ef6-4e14-929d-4fa916ad7ebf] succeeded in 23.221126347s: None
+2017-06-20 19:56:46,661 - Received task: lvmamaios.task.task_publish_project[1085e5e0-0a46-40bf-a79a-4694e6a1a463]
+2017-06-20 19:56:46,662 - Task accepted: lvmamaios.task.task_publish_project[1085e5e0-0a46-40bf-a79a-4694e6a1a463] pid:14942
+2017-06-20 20:03:14,320 - Task lvmamaios.task.task_publish_project[1085e5e0-0a46-40bf-a79a-4694e6a1a463] succeeded in 387.658206746s: None
+2017-06-20 20:03:14,322 - Received task: lvmamaios.task.task_publish_project[ddd4ba58-8959-495c-b9ba-c1448f763e36]
+2017-06-20 20:03:14,323 - Task accepted: lvmamaios.task.task_publish_project[ddd4ba58-8959-495c-b9ba-c1448f763e36] pid:14942
+2017-06-20 20:04:31,239 - Task lvmamaios.task.task_publish_project[ddd4ba58-8959-495c-b9ba-c1448f763e36] succeeded in 76.916860342s: None
+2017-06-20 20:05:20,653 - Received task: lvmamaios.task.task_publish_project[8ad27dd3-8451-49a1-a1e5-27136ce8ef32]
+2017-06-20 20:05:20,655 - Task accepted: lvmamaios.task.task_publish_project[8ad27dd3-8451-49a1-a1e5-27136ce8ef32] pid:14942
+2017-06-20 20:11:12,393 - Task lvmamaios.task.task_publish_project[8ad27dd3-8451-49a1-a1e5-27136ce8ef32] succeeded in 351.739875533s: None
+2017-06-20 20:11:12,397 - Received task: lvmamaios.task.task_publish_project[7118010b-944d-48c6-be07-d26a05e6d7da]
+2017-06-20 20:11:12,397 - Task accepted: lvmamaios.task.task_publish_project[7118010b-944d-48c6-be07-d26a05e6d7da] pid:14942
+2017-06-20 20:17:25,243 - Task lvmamaios.task.task_publish_project[7118010b-944d-48c6-be07-d26a05e6d7da] succeeded in 372.845706229s: None
+2017-06-20 20:17:25,246 - Received task: lvmamaios.task.task_publish_project[a4b0aecb-8b1c-451d-80de-eb2f953ddacd]
+2017-06-20 20:17:25,246 - Task accepted: lvmamaios.task.task_publish_project[a4b0aecb-8b1c-451d-80de-eb2f953ddacd] pid:14942
+2017-06-20 20:23:32,581 - Task lvmamaios.task.task_publish_project[a4b0aecb-8b1c-451d-80de-eb2f953ddacd] succeeded in 367.335434765s: None
+2017-06-20 20:23:32,584 - Received task: lvmamaios.task.task_publish_project[0b039931-264f-46be-8e37-dbe112d88584]
+2017-06-20 20:23:32,584 - Task accepted: lvmamaios.task.task_publish_project[0b039931-264f-46be-8e37-dbe112d88584] pid:14942
+2017-06-20 20:29:43,887 - Task lvmamaios.task.task_publish_project[0b039931-264f-46be-8e37-dbe112d88584] succeeded in 371.302869675s: None
+2017-06-20 20:29:43,889 - Received task: lvmamaios.task.task_publish_project[55ccd85e-2ee6-439e-95ca-4f5804fecbcf]
+2017-06-20 20:29:43,889 - Task accepted: lvmamaios.task.task_publish_project[55ccd85e-2ee6-439e-95ca-4f5804fecbcf] pid:14942
+2017-06-20 20:34:52,248 - Task lvmamaios.task.task_publish_project[55ccd85e-2ee6-439e-95ca-4f5804fecbcf] succeeded in 308.359073537s: None
+2017-06-21 10:01:12,472 - consumer: Cannot connect to redis://localhost:6379/0: .
+Trying again in 2.00 seconds...
+
+2017-06-21 10:01:14,482 - consumer: Cannot connect to redis://localhost:6379/0: .
+Trying again in 4.00 seconds...
+
+2017-06-21 10:01:18,499 - Connected to redis://localhost:6379/0
+2017-06-21 10:01:18,508 - mingle: searching for neighbors
+2017-06-21 10:01:19,516 - mingle: all alone
+2017-06-21 10:01:35,398 - Received task: lvmamaios.task.task_publish_project[f837c189-e99d-4a80-b157-e4be2be75d77]
+2017-06-21 10:01:35,399 - Task accepted: lvmamaios.task.task_publish_project[f837c189-e99d-4a80-b157-e4be2be75d77] pid:5178
+2017-06-21 10:08:34,247 - Task lvmamaios.task.task_publish_project[f837c189-e99d-4a80-b157-e4be2be75d77] succeeded in 418.848312784s: None
+2017-06-21 10:08:34,249 - Received task: lvmamaios.task.task_publish_project[32b746d3-e6c2-460f-aba0-fe5101336d2a]
+2017-06-21 10:08:34,249 - Task accepted: lvmamaios.task.task_publish_project[32b746d3-e6c2-460f-aba0-fe5101336d2a] pid:5178
+2017-06-21 10:13:53,358 - Task lvmamaios.task.task_publish_project[32b746d3-e6c2-460f-aba0-fe5101336d2a] succeeded in 319.108943332s: None
+2017-06-21 10:13:53,360 - Received task: lvmamaios.task.task_publish_project[cebe4b9b-a210-42e7-83cc-39463d20ec13]
+2017-06-21 10:13:53,360 - Task accepted: lvmamaios.task.task_publish_project[cebe4b9b-a210-42e7-83cc-39463d20ec13] pid:5178
+2017-06-21 10:24:25,073 - Task lvmamaios.task.task_publish_project[cebe4b9b-a210-42e7-83cc-39463d20ec13] succeeded in 631.712464378s: None
+2017-06-21 10:24:25,074 - Received task: lvmamaios.task.task_publish_project[d21015f7-0055-4a2a-93d4-994bef2acb0a]
+2017-06-21 10:24:25,075 - Task accepted: lvmamaios.task.task_publish_project[d21015f7-0055-4a2a-93d4-994bef2acb0a] pid:5178
+2017-06-21 10:30:04,501 - Task lvmamaios.task.task_publish_project[d21015f7-0055-4a2a-93d4-994bef2acb0a] succeeded in 339.426418973s: None
+2017-06-21 10:30:04,503 - Received task: lvmamaios.task.task_publish_project[a3ce5d17-8441-48bd-9236-269e70ce2397]
+2017-06-21 10:30:04,503 - Task accepted: lvmamaios.task.task_publish_project[a3ce5d17-8441-48bd-9236-269e70ce2397] pid:5178
+2017-06-21 10:35:20,101 - Task lvmamaios.task.task_publish_project[a3ce5d17-8441-48bd-9236-269e70ce2397] succeeded in 315.597730202s: None
+2017-06-21 10:35:20,103 - Received task: lvmamaios.task.task_publish_project[55900115-7408-4808-ae0b-f63e3745e0df]
+2017-06-21 10:35:20,103 - Task accepted: lvmamaios.task.task_publish_project[55900115-7408-4808-ae0b-f63e3745e0df] pid:5178
+2017-06-21 10:39:00,960 - Task lvmamaios.task.task_publish_project[55900115-7408-4808-ae0b-f63e3745e0df] succeeded in 220.857141608s: None
+2017-06-21 10:39:00,963 - Received task: lvmamaios.task.task_publish_project[b3ecba7a-6654-41f1-93d8-44462631b265]
+2017-06-21 10:39:00,963 - Task accepted: lvmamaios.task.task_publish_project[b3ecba7a-6654-41f1-93d8-44462631b265] pid:5178
+2017-06-21 10:40:08,295 - Task lvmamaios.task.task_publish_project[b3ecba7a-6654-41f1-93d8-44462631b265] succeeded in 67.332164785s: None
+2017-06-21 10:40:08,297 - Received task: lvmamaios.task.task_publish_project[1d1d7b16-0c7d-4174-b9e3-03ed7a3742a1]
+2017-06-21 10:40:08,298 - Task accepted: lvmamaios.task.task_publish_project[1d1d7b16-0c7d-4174-b9e3-03ed7a3742a1] pid:5178
+2017-06-21 10:40:51,200 - Task lvmamaios.task.task_publish_project[1d1d7b16-0c7d-4174-b9e3-03ed7a3742a1] succeeded in 42.90283815s: None
+2017-06-21 10:40:51,203 - Received task: lvmamaios.task.task_publish_project[a8855563-37c5-49d0-adea-64dabc9555ef]
+2017-06-21 10:40:51,203 - Task accepted: lvmamaios.task.task_publish_project[a8855563-37c5-49d0-adea-64dabc9555ef] pid:5178
+2017-06-21 10:41:30,154 - Task lvmamaios.task.task_publish_project[a8855563-37c5-49d0-adea-64dabc9555ef] succeeded in 38.950513686s: None
+2017-06-21 10:44:54,613 - Received task: lvmamaios.task.task_publish_project[60f1cdb2-9a6f-451b-88a7-d21d72f1b450]
+2017-06-21 10:44:54,614 - Task accepted: lvmamaios.task.task_publish_project[60f1cdb2-9a6f-451b-88a7-d21d72f1b450] pid:5178
+2017-06-21 10:51:50,828 - Task lvmamaios.task.task_publish_project[60f1cdb2-9a6f-451b-88a7-d21d72f1b450] succeeded in 416.215107825s: None
+2017-06-21 13:36:15,043 - Connected to redis://localhost:6379/0
+2017-06-21 13:36:15,051 - mingle: searching for neighbors
+2017-06-21 13:36:16,056 - mingle: all alone
+2017-06-21 13:50:07,759 - Received task: lvmamaios.task.task_publish_project[947fc105-1345-4e9b-86a2-465f13adae8c]
+2017-06-21 13:50:07,760 - Task accepted: lvmamaios.task.task_publish_project[947fc105-1345-4e9b-86a2-465f13adae8c] pid:65727
+2017-06-21 13:54:42,802 - Task lvmamaios.task.task_publish_project[947fc105-1345-4e9b-86a2-465f13adae8c] succeeded in 275.04272873s: None
+2017-06-21 13:56:36,801 - Received task: lvmamaios.task.task_publish_project[e25f2b40-202b-4398-9fe9-e72f0a7b3ddd]
+2017-06-21 13:56:36,803 - Task accepted: lvmamaios.task.task_publish_project[e25f2b40-202b-4398-9fe9-e72f0a7b3ddd] pid:65727
+2017-06-21 14:02:38,118 - Task lvmamaios.task.task_publish_project[e25f2b40-202b-4398-9fe9-e72f0a7b3ddd] succeeded in 361.316011034s: None
+2017-06-21 14:04:32,055 - Canceling task consumer...
+2017-06-21 14:04:32,057 - Canceling task consumer...
+2017-06-21 14:04:32,057 - Closing consumer channel...
+2017-06-21 14:05:22,200 - Connected to redis://localhost:6379/0
+2017-06-21 14:05:22,208 - mingle: searching for neighbors
+2017-06-21 14:05:23,217 - mingle: all alone
+2017-06-21 14:07:13,031 - Canceling task consumer...
+2017-06-21 14:07:13,033 - Canceling task consumer...
+2017-06-21 14:07:13,033 - Closing consumer channel...
+2017-06-21 14:07:15,442 - Connected to redis://localhost:6379/0
+2017-06-21 14:07:15,450 - mingle: searching for neighbors
+2017-06-21 14:07:16,454 - mingle: all alone
+2017-06-21 14:48:50,664 - Canceling task consumer...
+2017-06-21 14:48:50,666 - Canceling task consumer...
+2017-06-21 14:48:50,666 - Closing consumer channel...
+2017-06-21 14:48:53,477 - Connected to redis://localhost:6379/0
+2017-06-21 14:48:53,485 - mingle: searching for neighbors
+2017-06-21 14:48:54,492 - mingle: all alone
+2017-06-21 14:49:03,804 - Received task: lvmamaios.task.task_publish_vendor_project[9a92580d-c66c-49f7-8982-874fe7dafe04]
+2017-06-21 14:49:03,805 - Task accepted: lvmamaios.task.task_publish_vendor_project[9a92580d-c66c-49f7-8982-874fe7dafe04] pid:93397
+2017-06-21 14:49:04,421 - Task lvmamaios.task.task_publish_vendor_project[9a92580d-c66c-49f7-8982-874fe7dafe04] succeeded in 0.616929601001s: None
+2017-06-21 14:49:53,999 - Canceling task consumer...
+2017-06-21 14:49:54,000 - Canceling task consumer...
+2017-06-21 14:49:54,000 - Closing consumer channel...
+2017-06-21 14:49:56,509 - Connected to redis://localhost:6379/0
+2017-06-21 14:49:56,516 - mingle: searching for neighbors
+2017-06-21 14:49:57,523 - mingle: all alone
+2017-06-21 14:50:02,906 - Received task: lvmamaios.task.task_publish_vendor_project[78376a2d-e71b-4438-a0ea-90d583466bb2]
+2017-06-21 14:50:02,907 - Task accepted: lvmamaios.task.task_publish_vendor_project[78376a2d-e71b-4438-a0ea-90d583466bb2] pid:93461
+2017-06-21 14:50:09,085 - Task lvmamaios.task.task_publish_vendor_project[78376a2d-e71b-4438-a0ea-90d583466bb2] succeeded in 6.178912314s: None
+2017-06-21 14:50:59,713 - Canceling task consumer...
+2017-06-21 14:50:59,715 - Canceling task consumer...
+2017-06-21 14:50:59,715 - Closing consumer channel...
+2017-06-21 14:51:01,629 - Connected to redis://localhost:6379/0
+2017-06-21 14:51:01,637 - mingle: searching for neighbors
+2017-06-21 14:51:02,644 - mingle: all alone
+2017-06-21 14:51:07,054 - Received task: lvmamaios.task.task_publish_vendor_project[c8e5664b-b9a5-4692-a120-ef206da093bc]
+2017-06-21 14:51:07,054 - Task accepted: lvmamaios.task.task_publish_vendor_project[c8e5664b-b9a5-4692-a120-ef206da093bc] pid:93533
+2017-06-21 14:58:01,646 - Task lvmamaios.task.task_publish_vendor_project[c8e5664b-b9a5-4692-a120-ef206da093bc] succeeded in 414.591817463s: None
+2017-06-21 14:59:39,300 - Received task: lvmamaios.task.task_publish_vendor_project[7a5e1518-9a7f-489e-bb8a-8ff53c9b2a7f]
+2017-06-21 14:59:39,301 - Task accepted: lvmamaios.task.task_publish_vendor_project[7a5e1518-9a7f-489e-bb8a-8ff53c9b2a7f] pid:93533
+2017-06-21 15:06:37,854 - Task lvmamaios.task.task_publish_vendor_project[7a5e1518-9a7f-489e-bb8a-8ff53c9b2a7f] succeeded in 418.554159528s: None
+2017-06-21 15:07:03,141 - Canceling task consumer...
+2017-06-21 15:07:03,143 - Canceling task consumer...
+2017-06-21 15:07:03,143 - Closing consumer channel...
+2017-06-21 15:07:05,616 - Connected to redis://localhost:6379/0
+2017-06-21 15:07:05,624 - mingle: searching for neighbors
+2017-06-21 15:07:06,632 - mingle: all alone
+2017-06-21 15:07:12,427 - Received task: lvmamaios.task.task_publish_vendor_project[e257da53-40d0-4a8c-89e1-f8b1dfb01dc5]
+2017-06-21 15:07:12,428 - Task accepted: lvmamaios.task.task_publish_vendor_project[e257da53-40d0-4a8c-89e1-f8b1dfb01dc5] pid:6059
+2017-06-21 15:14:10,276 - Task lvmamaios.task.task_publish_vendor_project[e257da53-40d0-4a8c-89e1-f8b1dfb01dc5] succeeded in 417.848003189s: None
+2017-06-21 15:20:07,135 - Canceling task consumer...
+2017-06-21 15:20:07,137 - Canceling task consumer...
+2017-06-21 15:20:07,137 - Closing consumer channel...
+2017-06-21 15:20:10,288 - Connected to redis://localhost:6379/0
+2017-06-21 15:20:10,295 - mingle: searching for neighbors
+2017-06-21 15:20:11,302 - mingle: all alone
+2017-06-21 15:20:24,886 - Received task: lvmamaios.task.task_publish_vendor_project[25b66c43-fe92-4936-b1e1-6be036627f50]
+2017-06-21 15:20:24,887 - Task accepted: lvmamaios.task.task_publish_vendor_project[25b66c43-fe92-4936-b1e1-6be036627f50] pid:12362
+2017-06-21 15:27:42,384 - Task lvmamaios.task.task_publish_vendor_project[25b66c43-fe92-4936-b1e1-6be036627f50] succeeded in 437.497682206s: None
+2017-06-21 15:28:12,201 - Canceling task consumer...
+2017-06-21 15:28:12,201 - Canceling task consumer...
+2017-06-21 15:28:12,201 - Closing consumer channel...
+2017-06-21 15:28:14,717 - Connected to redis://localhost:6379/0
+2017-06-21 15:28:14,725 - mingle: searching for neighbors
+2017-06-21 15:28:15,733 - mingle: all alone
+2017-06-21 17:23:12,895 - Received task: lvmamaios.task.task_publish_project[e17516d1-fc94-4eed-b60a-777401f46361]
+2017-06-21 17:23:12,895 - Task accepted: lvmamaios.task.task_publish_project[e17516d1-fc94-4eed-b60a-777401f46361] pid:18686
+2017-06-21 17:30:14,191 - Task lvmamaios.task.task_publish_project[e17516d1-fc94-4eed-b60a-777401f46361] succeeded in 421.295556104s: None
+2017-06-21 17:34:18,948 - Received task: lvmamaios.task.task_publish_project[40ef05ad-9c51-4424-af43-fea5f5083cba]
+2017-06-21 17:34:18,949 - Task accepted: lvmamaios.task.task_publish_project[40ef05ad-9c51-4424-af43-fea5f5083cba] pid:18686
+2017-06-21 17:39:03,806 - Task lvmamaios.task.task_publish_project[40ef05ad-9c51-4424-af43-fea5f5083cba] succeeded in 284.857238729s: None
+2017-06-21 17:43:11,685 - Received task: lvmamaios.task.task_publish_project[a96c12ec-264f-4eac-b695-cecfc5f7f0fc]
+2017-06-21 17:43:11,692 - Task accepted: lvmamaios.task.task_publish_project[a96c12ec-264f-4eac-b695-cecfc5f7f0fc] pid:18686
+2017-06-21 17:46:40,099 - Task lvmamaios.task.task_publish_project[a96c12ec-264f-4eac-b695-cecfc5f7f0fc] succeeded in 208.413739489s: None
+2017-06-23 09:47:47,076 - Connected to redis://localhost:6379/0
+2017-06-23 09:47:47,084 - mingle: searching for neighbors
+2017-06-23 09:47:48,088 - mingle: all alone
+2017-06-23 09:53:59,672 - Received task: lvmamaios.task.task_publish_project[65ea578e-eba1-4c4e-8a65-5009e1059803]
+2017-06-23 09:53:59,673 - Task accepted: lvmamaios.task.task_publish_project[65ea578e-eba1-4c4e-8a65-5009e1059803] pid:2618
+2017-06-23 10:02:03,029 - Task lvmamaios.task.task_publish_project[65ea578e-eba1-4c4e-8a65-5009e1059803] succeeded in 483.356269206s: None
+2017-06-23 10:02:03,031 - Received task: lvmamaios.task.task_publish_project[5ab1ac9a-68e8-452d-b900-8a510fb70685]
+2017-06-23 10:02:03,031 - Task accepted: lvmamaios.task.task_publish_project[5ab1ac9a-68e8-452d-b900-8a510fb70685] pid:2618
+2017-06-23 10:08:06,090 - Task lvmamaios.task.task_publish_project[5ab1ac9a-68e8-452d-b900-8a510fb70685] succeeded in 363.058863524s: None
+2017-06-23 13:32:35,200 - Connected to redis://localhost:6379/0
+2017-06-23 13:32:35,208 - mingle: searching for neighbors
+2017-06-23 13:32:36,216 - mingle: all alone
+2017-06-23 13:34:34,239 - Canceling task consumer...
+2017-06-23 13:34:34,241 - Canceling task consumer...
+2017-06-23 13:34:34,241 - Closing consumer channel...
+2017-06-23 13:34:37,079 - Connected to redis://localhost:6379/0
+2017-06-23 13:34:37,086 - mingle: searching for neighbors
+2017-06-23 13:34:38,090 - mingle: all alone
+2017-06-23 13:39:17,670 - Received task: lvmamaios.task.task_publish_project[4d1218c9-ee0d-45dd-892c-6a18f21d52d8]
+2017-06-23 13:39:17,671 - Task accepted: lvmamaios.task.task_publish_project[4d1218c9-ee0d-45dd-892c-6a18f21d52d8] pid:64990
+2017-06-23 13:46:25,933 - Task lvmamaios.task.task_publish_project[4d1218c9-ee0d-45dd-892c-6a18f21d52d8] succeeded in 428.265240368s: None
+2017-06-23 13:48:05,426 - Canceling task consumer...
+2017-06-23 13:48:05,428 - Canceling task consumer...
+2017-06-23 13:48:05,428 - Closing consumer channel...
+2017-06-23 13:48:08,248 - Connected to redis://localhost:6379/0
+2017-06-23 13:48:08,255 - mingle: searching for neighbors
+2017-06-23 13:48:09,260 - mingle: all alone
+2017-06-23 13:48:16,232 - Received task: lvmamaios.task.task_publish_project[22e6a275-4406-4cb7-8a1f-1e45d0aa104d]
+2017-06-23 13:48:16,233 - Task accepted: lvmamaios.task.task_publish_project[22e6a275-4406-4cb7-8a1f-1e45d0aa104d] pid:73306
+2017-06-23 13:54:43,627 - Task lvmamaios.task.task_publish_project[22e6a275-4406-4cb7-8a1f-1e45d0aa104d] succeeded in 387.398043373s: None
+2017-06-27 11:40:23,080 - Connected to redis://localhost:6379/0
+2017-06-27 11:40:23,089 - mingle: searching for neighbors
+2017-06-27 11:40:24,093 - mingle: all alone
+2017-06-27 11:49:23,088 - Canceling task consumer...
+2017-06-27 11:49:23,094 - Canceling task consumer...
+2017-06-27 11:49:23,094 - Closing consumer channel...
+2017-06-27 11:49:25,446 - Connected to redis://localhost:6379/0
+2017-06-27 11:49:25,455 - mingle: searching for neighbors
+2017-06-27 11:49:26,460 - mingle: all alone
+2017-06-27 11:49:28,134 - Received task: lvmamaios.task.allModuleDoSomething[66bbd41a-b90c-4733-afb4-59f9b6e5d919]
+2017-06-27 11:49:28,135 - Task accepted: lvmamaios.task.allModuleDoSomething[66bbd41a-b90c-4733-afb4-59f9b6e5d919] pid:41557
+2017-06-27 11:49:30,018 - Task lvmamaios.task.allModuleDoSomething[66bbd41a-b90c-4733-afb4-59f9b6e5d919] succeeded in 1.883468814s: None
+2017-06-27 11:51:35,936 - Received task: lvmamaios.task.allModuleDoSomething[f3d0bfca-217c-44d8-bcf4-a6baf5754de5]
+2017-06-27 11:51:35,937 - Task accepted: lvmamaios.task.allModuleDoSomething[f3d0bfca-217c-44d8-bcf4-a6baf5754de5] pid:41557
+2017-06-27 11:51:41,579 - Task lvmamaios.task.allModuleDoSomething[f3d0bfca-217c-44d8-bcf4-a6baf5754de5] succeeded in 5.642594368s: None
+2017-06-27 11:57:00,604 - Received task: lvmamaios.task.allModuleDoSomething[694d5694-8fae-4d73-8243-c219520c2fe8]
+2017-06-27 11:57:00,605 - Task accepted: lvmamaios.task.allModuleDoSomething[694d5694-8fae-4d73-8243-c219520c2fe8] pid:41557
+2017-06-27 11:57:02,557 - Task lvmamaios.task.allModuleDoSomething[694d5694-8fae-4d73-8243-c219520c2fe8] succeeded in 1.952770705s: None
+2017-06-27 11:57:16,286 - Received task: lvmamaios.task.allModuleDoSomething[2495cf4b-c145-4c61-b56e-52ad96615e4a]
+2017-06-27 11:57:16,287 - Task accepted: lvmamaios.task.allModuleDoSomething[2495cf4b-c145-4c61-b56e-52ad96615e4a] pid:41557
+2017-06-27 11:57:18,173 - Task lvmamaios.task.allModuleDoSomething[2495cf4b-c145-4c61-b56e-52ad96615e4a] succeeded in 1.886737891s: None
+2017-06-27 11:57:22,243 - Received task: lvmamaios.task.allModuleDoSomething[ee199155-943e-4d70-b831-49b47924281f]
+2017-06-27 11:57:22,244 - Task accepted: lvmamaios.task.allModuleDoSomething[ee199155-943e-4d70-b831-49b47924281f] pid:41557
+2017-06-27 11:57:24,427 - Task lvmamaios.task.allModuleDoSomething[ee199155-943e-4d70-b831-49b47924281f] succeeded in 2.184051021s: None
+2017-06-27 13:34:45,305 - Canceling task consumer...
+2017-06-27 13:34:45,305 - Canceling task consumer...
+2017-06-27 13:34:45,305 - Closing consumer channel...
+2017-06-27 13:34:47,831 - Connected to redis://localhost:6379/0
+2017-06-27 13:34:47,838 - mingle: searching for neighbors
+2017-06-27 13:34:48,852 - mingle: all alone
+2017-06-27 13:38:58,225 - Received task: lvmamaios.task.allModuleDoSomething[eba5ca39-0190-48fa-a3db-d82f1c687af5]
+2017-06-27 13:38:58,226 - Task accepted: lvmamaios.task.allModuleDoSomething[eba5ca39-0190-48fa-a3db-d82f1c687af5] pid:43627
+2017-06-27 13:38:58,233 - Task lvmamaios.task.allModuleDoSomething[eba5ca39-0190-48fa-a3db-d82f1c687af5] succeeded in 0.00777456000105s: None
+2017-06-27 13:39:04,525 - Received task: lvmamaios.task.allModuleDoSomething[9e82500f-eaa6-48db-b5f8-dc4e23c3c3a2]
+2017-06-27 13:39:04,526 - Task accepted: lvmamaios.task.allModuleDoSomething[9e82500f-eaa6-48db-b5f8-dc4e23c3c3a2] pid:43627
+2017-06-27 13:39:10,743 - Task lvmamaios.task.allModuleDoSomething[9e82500f-eaa6-48db-b5f8-dc4e23c3c3a2] succeeded in 6.217427578s: None
+2017-06-27 13:40:38,380 - Received task: lvmamaios.task.allModuleDoSomething[4d18ac3a-8e35-4459-b0e1-8c61ebacf48b]
+2017-06-27 13:40:38,382 - Task accepted: lvmamaios.task.allModuleDoSomething[4d18ac3a-8e35-4459-b0e1-8c61ebacf48b] pid:43627
+2017-06-27 13:40:41,409 - Task lvmamaios.task.allModuleDoSomething[4d18ac3a-8e35-4459-b0e1-8c61ebacf48b] succeeded in 3.028924782s: None
+2017-06-27 13:43:55,658 - Received task: lvmamaios.task.allModuleDoSomething[f3bf24b3-80eb-4649-ab56-553aa2b071d4]
+2017-06-27 13:43:55,659 - Task accepted: lvmamaios.task.allModuleDoSomething[f3bf24b3-80eb-4649-ab56-553aa2b071d4] pid:43627
+2017-06-27 13:44:37,917 - Task lvmamaios.task.allModuleDoSomething[f3bf24b3-80eb-4649-ab56-553aa2b071d4] succeeded in 42.257971637s: None
+2017-06-27 13:54:19,074 - Received task: lvmamaios.task.allModuleDoSomething[31244b00-77f9-4d25-970c-1598d6092905]
+2017-06-27 13:54:19,075 - Task accepted: lvmamaios.task.allModuleDoSomething[31244b00-77f9-4d25-970c-1598d6092905] pid:43627
+2017-06-27 13:54:25,621 - Task lvmamaios.task.allModuleDoSomething[31244b00-77f9-4d25-970c-1598d6092905] succeeded in 6.546921989s: None
+2017-06-27 13:54:31,368 - Received task: lvmamaios.task.allModuleDoSomething[ac5fb003-67e0-4bd1-84f4-628f6effcf36]
+2017-06-27 13:54:31,369 - Task accepted: lvmamaios.task.allModuleDoSomething[ac5fb003-67e0-4bd1-84f4-628f6effcf36] pid:43627
+2017-06-27 13:54:33,759 - Task lvmamaios.task.allModuleDoSomething[ac5fb003-67e0-4bd1-84f4-628f6effcf36] succeeded in 2.390939907s: None
+2017-06-27 15:12:21,859 - Received task: lvmamaios.task.allModuleDoSomething[88dcfe10-72b7-49a4-8afb-17dd4aa12d0f]
+2017-06-27 15:12:21,859 - Task accepted: lvmamaios.task.allModuleDoSomething[88dcfe10-72b7-49a4-8afb-17dd4aa12d0f] pid:43627
+2017-06-27 15:12:27,030 - Task lvmamaios.task.allModuleDoSomething[88dcfe10-72b7-49a4-8afb-17dd4aa12d0f] succeeded in 5.170905057s: None
+2017-06-27 15:14:38,934 - Received task: lvmamaios.task.allModuleDoSomething[5a9c9532-be60-4a7c-9134-98b71134b1e0]
+2017-06-27 15:14:38,935 - Task accepted: lvmamaios.task.allModuleDoSomething[5a9c9532-be60-4a7c-9134-98b71134b1e0] pid:43627
+2017-06-27 15:14:49,541 - Task lvmamaios.task.allModuleDoSomething[5a9c9532-be60-4a7c-9134-98b71134b1e0] succeeded in 10.606326556s: None
+2017-06-27 15:22:40,353 - Received task: lvmamaios.task.allModuleDoSomething[22744904-691a-4ff8-88cd-13ba3b962eb7]
+2017-06-27 15:22:40,354 - Task accepted: lvmamaios.task.allModuleDoSomething[22744904-691a-4ff8-88cd-13ba3b962eb7] pid:43627
+2017-06-27 15:23:43,741 - Task lvmamaios.task.allModuleDoSomething[22744904-691a-4ff8-88cd-13ba3b962eb7] succeeded in 63.387589379s: None
+2017-06-27 15:23:51,456 - Received task: lvmamaios.task.allModuleDoSomething[00b0743e-c0d9-4591-94e7-fe87d248215d]
+2017-06-27 15:23:51,457 - Task accepted: lvmamaios.task.allModuleDoSomething[00b0743e-c0d9-4591-94e7-fe87d248215d] pid:43627
+2017-06-27 15:24:54,825 - Task lvmamaios.task.allModuleDoSomething[00b0743e-c0d9-4591-94e7-fe87d248215d] succeeded in 63.369578231s: None
+2017-06-27 15:27:27,614 - Received task: lvmamaios.task.allModuleDoSomething[d0f9d2c3-8121-4464-8178-660b0130132a]
+2017-06-27 15:27:27,615 - Task accepted: lvmamaios.task.allModuleDoSomething[d0f9d2c3-8121-4464-8178-660b0130132a] pid:43627
+2017-06-27 15:27:37,983 - Task lvmamaios.task.allModuleDoSomething[d0f9d2c3-8121-4464-8178-660b0130132a] succeeded in 10.368741181s: None
+2017-06-27 15:29:12,559 - Received task: lvmamaios.task.allModuleDoSomething[5077b72b-5bd5-4225-900c-e8cecf572c2c]
+2017-06-27 15:29:12,561 - Task accepted: lvmamaios.task.allModuleDoSomething[5077b72b-5bd5-4225-900c-e8cecf572c2c] pid:43627
+2017-06-27 15:29:22,873 - Task lvmamaios.task.allModuleDoSomething[5077b72b-5bd5-4225-900c-e8cecf572c2c] succeeded in 10.314355946s: None
+2017-06-27 15:30:09,100 - Received task: lvmamaios.task.allModuleDoSomething[cb43bb49-d612-44c7-a5dd-37b533ff2e5c]
+2017-06-27 15:30:09,101 - Task accepted: lvmamaios.task.allModuleDoSomething[cb43bb49-d612-44c7-a5dd-37b533ff2e5c] pid:43627
+2017-06-27 15:30:18,453 - Task lvmamaios.task.allModuleDoSomething[cb43bb49-d612-44c7-a5dd-37b533ff2e5c] succeeded in 9.352989016s: None
+2017-06-27 15:31:10,635 - Received task: lvmamaios.task.allModuleDoSomething[a0a35258-9f48-4cca-bcde-d1e9840ea3fe]
+2017-06-27 15:31:10,636 - Task accepted: lvmamaios.task.allModuleDoSomething[a0a35258-9f48-4cca-bcde-d1e9840ea3fe] pid:43627
+2017-06-27 15:31:20,354 - Task lvmamaios.task.allModuleDoSomething[a0a35258-9f48-4cca-bcde-d1e9840ea3fe] succeeded in 9.718242456s: None
+2017-06-27 15:31:28,552 - Received task: lvmamaios.task.allModuleDoSomething[8c945b16-5a52-482a-a49b-842c51e0e4b0]
+2017-06-27 15:31:28,553 - Task accepted: lvmamaios.task.allModuleDoSomething[8c945b16-5a52-482a-a49b-842c51e0e4b0] pid:43627
+2017-06-27 15:32:17,803 - Task lvmamaios.task.allModuleDoSomething[8c945b16-5a52-482a-a49b-842c51e0e4b0] succeeded in 49.250498124s: None
+2017-06-27 15:36:46,579 - Received task: lvmamaios.task.allModuleDoSomething[c8ed6b03-7d18-4205-acb6-378bad63730f]
+2017-06-27 15:36:46,580 - Task accepted: lvmamaios.task.allModuleDoSomething[c8ed6b03-7d18-4205-acb6-378bad63730f] pid:43627
+2017-06-27 15:37:35,631 - Task lvmamaios.task.allModuleDoSomething[c8ed6b03-7d18-4205-acb6-378bad63730f] succeeded in 49.051515576s: None
+2017-06-27 15:38:15,288 - Received task: lvmamaios.task.allModuleDoSomething[aa625742-cda5-4a04-a39a-5918511c06c0]
+2017-06-27 15:38:15,289 - Task accepted: lvmamaios.task.allModuleDoSomething[aa625742-cda5-4a04-a39a-5918511c06c0] pid:43627
+2017-06-27 15:39:28,826 - Task lvmamaios.task.allModuleDoSomething[aa625742-cda5-4a04-a39a-5918511c06c0] succeeded in 73.538356217s: None
+2017-06-27 15:52:08,657 - Received task: lvmamaios.task.allModuleDoSomething[456a049c-9775-498c-9b2d-42457f9e6041]
+2017-06-27 15:52:08,658 - Task accepted: lvmamaios.task.allModuleDoSomething[456a049c-9775-498c-9b2d-42457f9e6041] pid:43627
+2017-06-27 15:52:10,796 - Task lvmamaios.task.allModuleDoSomething[456a049c-9775-498c-9b2d-42457f9e6041] succeeded in 2.138263034s: None
+2017-06-27 15:52:21,007 - Received task: lvmamaios.task.allModuleDoSomething[3151e7aa-120e-4a29-9518-66e6966e4927]
+2017-06-27 15:52:21,008 - Task accepted: lvmamaios.task.allModuleDoSomething[3151e7aa-120e-4a29-9518-66e6966e4927] pid:43627
+2017-06-27 15:52:22,901 - Task lvmamaios.task.allModuleDoSomething[3151e7aa-120e-4a29-9518-66e6966e4927] succeeded in 1.893385986s: None
+2017-06-27 15:54:04,396 - Received task: lvmamaios.task.allModuleDoSomething[9fd79774-382b-458d-a150-1caabaa969b3]
+2017-06-27 15:54:04,397 - Task accepted: lvmamaios.task.allModuleDoSomething[9fd79774-382b-458d-a150-1caabaa969b3] pid:43627
+2017-06-27 15:54:06,297 - Task lvmamaios.task.allModuleDoSomething[9fd79774-382b-458d-a150-1caabaa969b3] succeeded in 1.900965089s: None
+2017-06-27 15:54:56,487 - Received task: lvmamaios.task.allModuleDoSomething[fa16a8d8-3a2d-4e05-9fd8-05c7691bc15f]
+2017-06-27 15:54:56,488 - Task accepted: lvmamaios.task.allModuleDoSomething[fa16a8d8-3a2d-4e05-9fd8-05c7691bc15f] pid:43627
+2017-06-27 15:54:58,449 - Task lvmamaios.task.allModuleDoSomething[fa16a8d8-3a2d-4e05-9fd8-05c7691bc15f] succeeded in 1.960965638s: None
+2017-06-27 15:55:07,726 - Received task: lvmamaios.task.allModuleDoSomething[72c945a2-b224-4beb-b189-e16057b77881]
+2017-06-27 15:55:07,727 - Task accepted: lvmamaios.task.allModuleDoSomething[72c945a2-b224-4beb-b189-e16057b77881] pid:43627
+2017-06-27 15:55:34,330 - Task lvmamaios.task.allModuleDoSomething[72c945a2-b224-4beb-b189-e16057b77881] succeeded in 26.603392293s: None
+2017-06-27 15:56:54,156 - Received task: lvmamaios.task.allModuleDoSomething[dc144c13-9112-4c17-b249-f15977baa117]
+2017-06-27 15:56:54,157 - Task accepted: lvmamaios.task.allModuleDoSomething[dc144c13-9112-4c17-b249-f15977baa117] pid:43627
+2017-06-27 15:57:00,330 - Task lvmamaios.task.allModuleDoSomething[dc144c13-9112-4c17-b249-f15977baa117] succeeded in 6.172974822s: None
+2017-06-27 16:52:06,247 - Received task: lvmamaios.task.allModuleDoSomething[a924912e-12ad-4198-b535-62f2f831ed43]
+2017-06-27 16:52:06,249 - Task accepted: lvmamaios.task.allModuleDoSomething[a924912e-12ad-4198-b535-62f2f831ed43] pid:43627
+2017-06-27 16:52:08,564 - Task lvmamaios.task.allModuleDoSomething[a924912e-12ad-4198-b535-62f2f831ed43] succeeded in 2.315508873s: None
+2017-06-27 16:53:13,874 - Received task: lvmamaios.task.allModuleDoSomething[de71b9a5-7e71-4c26-8f9a-3a0f9b79ee6d]
+2017-06-27 16:53:13,875 - Task accepted: lvmamaios.task.allModuleDoSomething[de71b9a5-7e71-4c26-8f9a-3a0f9b79ee6d] pid:43627
+2017-06-27 16:53:16,653 - Task lvmamaios.task.allModuleDoSomething[de71b9a5-7e71-4c26-8f9a-3a0f9b79ee6d] succeeded in 2.778975259s: None
+2017-06-27 16:53:41,597 - Received task: lvmamaios.task.allModuleDoSomething[ffa1df18-ff8e-4313-b685-d6b91e7c255e]
+2017-06-27 16:53:41,598 - Task accepted: lvmamaios.task.allModuleDoSomething[ffa1df18-ff8e-4313-b685-d6b91e7c255e] pid:43627
+2017-06-27 16:53:51,005 - Task lvmamaios.task.allModuleDoSomething[ffa1df18-ff8e-4313-b685-d6b91e7c255e] succeeded in 9.407348129s: None
+2017-06-27 17:20:05,028 - Received task: lvmamaios.task.allModuleDoSomething[f4367125-e259-4384-a5eb-877b48f45a5b]
+2017-06-27 17:20:05,028 - Task accepted: lvmamaios.task.allModuleDoSomething[f4367125-e259-4384-a5eb-877b48f45a5b] pid:43627
+2017-06-27 17:20:07,889 - Task lvmamaios.task.allModuleDoSomething[f4367125-e259-4384-a5eb-877b48f45a5b] succeeded in 2.860726772s: None
+2017-06-27 17:28:40,216 - Received task: lvmamaios.task.allModuleDoSomething[413f9532-5967-4758-9288-a6876bccd0ed]
+2017-06-27 17:28:40,217 - Task accepted: lvmamaios.task.allModuleDoSomething[413f9532-5967-4758-9288-a6876bccd0ed] pid:43627
+2017-06-27 17:28:43,222 - Task lvmamaios.task.allModuleDoSomething[413f9532-5967-4758-9288-a6876bccd0ed] succeeded in 3.005541819s: None
+2017-06-27 17:33:21,854 - Received task: lvmamaios.task.allModuleDoSomething[af2163e8-b5e3-42fe-ac91-36c9b1a3802d]
+2017-06-27 17:33:21,855 - Task accepted: lvmamaios.task.allModuleDoSomething[af2163e8-b5e3-42fe-ac91-36c9b1a3802d] pid:43627
+2017-06-27 17:33:23,798 - Task lvmamaios.task.allModuleDoSomething[af2163e8-b5e3-42fe-ac91-36c9b1a3802d] succeeded in 1.944340695s: None
+2017-06-27 17:41:35,902 - Received task: lvmamaios.task.allModuleDoSomething[c0adae02-dc7b-4d96-8ca0-4027910bb669]
+2017-06-27 17:41:35,903 - Task accepted: lvmamaios.task.allModuleDoSomething[c0adae02-dc7b-4d96-8ca0-4027910bb669] pid:43627
+2017-06-27 17:41:38,964 - Task lvmamaios.task.allModuleDoSomething[c0adae02-dc7b-4d96-8ca0-4027910bb669] succeeded in 3.061044189s: None
+2017-06-27 17:42:29,048 - Received task: lvmamaios.task.allModuleDoSomething[ee477b84-a506-426a-a4d9-8c9c3f5affb0]
+2017-06-27 17:42:29,048 - Task accepted: lvmamaios.task.allModuleDoSomething[ee477b84-a506-426a-a4d9-8c9c3f5affb0] pid:43627
+2017-06-27 17:42:37,882 - Task lvmamaios.task.allModuleDoSomething[ee477b84-a506-426a-a4d9-8c9c3f5affb0] succeeded in 8.834554135s: None
+2017-06-27 17:42:52,565 - Received task: lvmamaios.task.allModuleDoSomething[00ec4108-f5e0-4a30-b346-d3109e076e14]
+2017-06-27 17:42:52,566 - Task accepted: lvmamaios.task.allModuleDoSomething[00ec4108-f5e0-4a30-b346-d3109e076e14] pid:43627
+2017-06-27 17:43:32,040 - Task lvmamaios.task.allModuleDoSomething[00ec4108-f5e0-4a30-b346-d3109e076e14] succeeded in 39.474943021s: None
+2017-06-27 17:46:59,818 - Connected to redis://localhost:6379/0
+2017-06-27 17:46:59,826 - mingle: searching for neighbors
+2017-06-27 17:47:00,833 - mingle: all alone
+2017-06-27 19:51:29,709 - Received task: lvmamaios.task.allModuleDoSomething[415b1039-e5db-42a6-bb19-99b127f6c181]
+2017-06-27 19:51:29,712 - Task accepted: lvmamaios.task.allModuleDoSomething[415b1039-e5db-42a6-bb19-99b127f6c181] pid:20611
+2017-06-27 19:51:33,658 - Task lvmamaios.task.allModuleDoSomething[415b1039-e5db-42a6-bb19-99b127f6c181] succeeded in 3.946184187s: None
+2017-06-27 19:53:45,539 - Received task: lvmamaios.task.allModuleDoSomething[11f97b45-ac42-4d65-b3df-965ee50bae51]
+2017-06-27 19:53:45,540 - Task accepted: lvmamaios.task.allModuleDoSomething[11f97b45-ac42-4d65-b3df-965ee50bae51] pid:20611
+2017-06-27 19:53:49,041 - Task lvmamaios.task.allModuleDoSomething[11f97b45-ac42-4d65-b3df-965ee50bae51] succeeded in 3.501664143s: None
+2017-06-27 19:54:23,628 - Received task: lvmamaios.task.allModuleDoSomething[4993eb78-d1e3-445a-98f5-a080cbd62036]
+2017-06-27 19:54:23,631 - Task accepted: lvmamaios.task.allModuleDoSomething[4993eb78-d1e3-445a-98f5-a080cbd62036] pid:20611
+2017-06-27 19:54:32,498 - Task lvmamaios.task.allModuleDoSomething[4993eb78-d1e3-445a-98f5-a080cbd62036] succeeded in 8.867960229s: None
+2017-06-27 19:54:47,853 - Received task: lvmamaios.task.allModuleDoSomething[e4a91f90-c2f9-4660-947f-26ec8ff7f285]
+2017-06-27 19:54:47,854 - Task accepted: lvmamaios.task.allModuleDoSomething[e4a91f90-c2f9-4660-947f-26ec8ff7f285] pid:20611
+2017-06-27 19:55:32,243 - Task lvmamaios.task.allModuleDoSomething[e4a91f90-c2f9-4660-947f-26ec8ff7f285] succeeded in 44.389367174s: None

@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../static/bootstrap/favicon.ico">
 
-    <title>Dashboard</title>
+    <title>App List</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../static/bootstrap/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../static/bootstrap/assets/js/ie-emulation-modes-warning.js"></script>
-
+    <script src="../../static/js/jquery.min.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -44,8 +44,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-          {% if can_add_project %}
-	         <li><a href="/lvmamaios/create_project/">Create Project</a></li>
+          {% if can_add_app %}
+	         <li><a href="/lvmamaios/create_app/">Create App</a></li>
           {% endif %}
             <li><a href="#">{{username}}</a></li>
 	    <li><a href="/lvmamaios/signout/">Sign Out</a></li>
@@ -61,63 +61,104 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview<span class="sr-only">(current)</span></a></li>
+            <li><a href="/lvmamaios/index">Overview<span class="sr-only">(current)</span></a></li>
             <li><a href="/lvmamaios/article_list">Articles<span class="sr-only">(current)</span></a></li>
-            <li><a href="/lvmamaios/app_list">Apps<span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="#">Apps<span class="sr-only">(current)</span></a></li>
             <li><a href="/lvmamaios/all_module_do_something">All Modules<span class="sr-only">(current)</span></a></li>
           </ul>
         </div>
 
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-  <h1 class="page-header">Dashboard</h1>
+  <h1 class="page-header">App List</h1>
+  <ul class="nav nav-tabs" id="lvmamatap">
+  {% for app in apps %}
+  {% if forloop.counter == 1 %}
+  <li role="presentation" class="active"><a href="#{{app.app_name}}">{{app.app_name}}</a></li>
+  {% else %}
+  <li role="presentation"><a href="#{{app.app_name}}">{{app.app_name}}</a></li>
+  {% endif %}
+  {% endfor %}
+  </ul>
+<br>
 
-  <div class="row placeholders">
-<table class="table" id="para_table">  
-    <tr>  
-        <th style="text-align:center" width="80">模块</th>  
-        <th style="text-align:center" width="80">版本</th>  
-        <th style="text-align:center" width="40">是否最新</th>
-        <th style="text-align:center" width="40">是否RC</th>
-        <th style="text-align:center" width="50">发布人</th>
-        <th style="text-align:center" width="100">发布时间</th>
-        <th style="text-align:center" width="40">查看</th>
-        <th style="text-align:center" width="40">发布</th>
-        {% if can_delete_project %}
-        <th style="text-align:center" width="40">操作</th>
-        {% endif %}
-    </tr>
-    {% for project in projects %}
-    <tr>  
-      <td style="text-align:center; " onclick="tdclick(this)">{{project.project_name}}</td>  
-      <td style="text-align:center; " onclick="tdclick(this)">{{project.latest_version_name}}</td>
-      {% if project.is_latest == True %}
-      <td style="text-align:center; " onclick="tdclick(this)"><span class="label label-info">L</span></td>
-      {% else %}
-      <td style="text-align:center; " onclick="tdclick(this)"></td>
-      {% endif %}
-      {% if project.is_rc == True %}
-      <td style="text-align:center; " onclick="tdclick(this)"><span class="label label-success">RC</span></td>
-      {% else %}
-      <td style="text-align:center; " onclick="tdclick(this)"></td>
-      {% endif %}
-      <td style="text-align:center; " onclick="tdclick(this)">{{project.latest_version_publish_people}}</td>
-      <td style="text-align:center; " onclick="tdclick(this)">{{project.latest_version_publish_date | date:"Y-m-d H:i:s"}}</td>
-      <td style="text-align:center; " onclick="tdclick(this)">
-        <button type="button"  class="btn btn-xs btn-primary"><a href="/lvmamaios/project/{{ project.id }}"><font color="#ffffff">查看</font></a></a></button>
-      </td>
-      <td style="text-align:center; " onclick="deletetr(this)">
-        <button type="button"  class="btn btn-xs btn-primary"><a href="/lvmamaios/publish_project/{{ project.id }}"><font color="#ffffff">发布</font></a></button>  
-      </td>
-      {% if can_delete_project %}
-      <td style="text-align:center; " onclick="deletetr(this)">
-        <button type="button"  class="btn btn-xs btn-danger"><a href="/lvmamaios/delete_project/{{ project.id }}"><font color="#ffffff">删除</font></a></button>  
-      </td>
-      {% endif %}
-    </tr>
-    {% endfor %}
-</table> 
-  </div>
+<div class="tab-content">
+
+{% for app_versions in versions %}
+{% load tags %}
+{% with lookup_result=apps|lookup:forloop.counter %}
+  {% if forloop.counter == 1 %}
+    <div class="tab-pane active" id="{{lookup_result.app_name}}">
+  {% else %}
+    <div class="tab-pane" id="{{lookup_result.app_name}}">
+  {% endif %}
+        <table class="table table-hover">
+            </br>
+            <thead>
+            <tr>
+                <th style="text-align:center;">版本号</th>
+                <th style="text-align:center;">是否RC</th>
+                {% if can_delete_appversion %}
+                <th style="text-align:center;">操作</th>
+                {% endif %}
+            </tr>
+            </thead>
+            <tbody class="lvmama">
+            {% if can_add_appversion %}
+            <tr>
+            <button type="button" class="btn btn-primary">
+              <a href="/lvmamaios/add_new_appversion/{{lookup_result.id}}"><font color="#ffffff">Add New App Version</font></a>
+            </button>
+            </tr>
+            {% endif %}
+            {% for app_version in app_versions %}
+            <tr>
+                <td style="text-align:center;"><a href="/lvmamaios/app_version/{{app_version.id}}">{{app_version.app_version}}</a></td>
+                  {% if app_version.is_rc == True %}
+                    <td style="text-align:center; " onclick="tdclick(this)"><span class="label label-success">RC</span></td>
+                  {% else %}
+                    <td style="text-align:center; " onclick="tdclick(this)"></td>
+                  {% endif %}
+                  {% if can_delete_appversion %}
+                  <td style="text-align:center; " onclick="deletetr(this)">  
+                    <button type="button"  class="btn btn-xs btn-link">
+                    <a href="/lvmamaios/delete_appversion/{{ app_version.id }}">Delete</a>
+                    </button>  
+                  </td>
+                  {% endif %}
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endwith %}
+{% endfor %}
 </div>
+
+</div>
+
+<script type="text/javascript">
+$('#lvmamatap a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+        var hrefStr = $(this).attr('href').replace('#','');
+        //console.log(hrefStr);
+        updateTable('.'+hrefStr);
+    });
+
+    function updateTable(tbody) {
+        $(tbody).find('tr').each(function () {
+            var html ="";
+            var rowElement = $(this);
+            $(this).find('td').each(function () {
+                
+            })
+        });
+    }
+    {% if apps.count > 0 %}
+    updateTable('.{{apps.first.app_name}}');
+    {% endif %}
+    setInterval("document.getElementById('time1').innerHTML = new Date().toLocaleString();", 1000);
+</script>
 
 <!-- Bootstrap core JavaScript
     ================================================== -->
